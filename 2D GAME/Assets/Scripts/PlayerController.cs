@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R)) {SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
         // coyote time and jump buffering
         if (grounded) {coyoteTracker = coyoteTime;} else { coyoteTracker -= Time.deltaTime; }
         if (Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.W)) { bufferTracker = bufferTime; } else { bufferTracker -= Time.deltaTime; }
@@ -58,30 +60,29 @@ public class PlayerController : MonoBehaviour
         }
     }
     void DecideGravity() {
-        if (rb.velocity.y < -20f) {
-            rb.velocity = new Vector2(rb.velocity.x, -20);
-        } else if (rb.velocity.y >= -20f && rb.velocity.y < -0.5f) {
+        if (rb.velocity.y < -15f) {
+            rb.velocity = new Vector2(rb.velocity.x, -15);
+        } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
             rb.gravityScale = 4f;
-        } else if (rb.velocity.y >= -0.5f && rb.velocity.y < 0.5f) {
-            rb.gravityScale = 0.7f; // make the player more floaty at the peak of their jump
+        } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
+            rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
         } else if (rb.velocity.y >= 0.5f) {
-            rb.gravityScale = 2f;
+            rb.gravityScale = 1.6f;
         }
     }
 
     void Walk()
     {
         if (grounded) { horizontal_top_speed = 8f; }
-        else if (rb.velocity.y >= -0.5f && rb.velocity.y < 0.5f){ horizontal_top_speed = 6f; }
         else { horizontal_top_speed = 5f; }
 
         horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(rb.velocity.x + (horizontal_target_speed - rb.velocity.x) * 0.3f, rb.velocity.y);
+        rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
     }
     void Jump()
     {
         bufferTracker = 0f;
-        rb.velocity = new Vector2(rb.velocity.x, 11.5f);
+        rb.velocity = new Vector2(rb.velocity.x, 10f);
         if (grounded) { grounded = false; } else { dubjump = false; }
     }
 }
