@@ -78,6 +78,8 @@ public class PlayerController : MonoBehaviour
 
         horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
+        if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
+        else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
     }
     void Jump()
     {
