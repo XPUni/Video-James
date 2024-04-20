@@ -15,7 +15,7 @@ C:/Users/casey/OneDrive/Desktop/Unity Projects/Video-James/2D GAME
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-63702
+62502
 -job-worker-count
 5
 -background-job-worker-count
@@ -58,12 +58,12 @@ C:/Users/casey/OneDrive/Desktop/Unity Projects/Video-James/2D GAME
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21140] Host "[IP] 172.19.113.27 [Port] 0 [Flags] 2 [Guid] 898364732 [EditorId] 898364732 [Version] 1048832 [Id] WindowsEditor(7,Casey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [21140] Host "[IP] 172.19.113.27 [Port] 0 [Flags] 2 [Guid] 898364732 [EditorId] 898364732 [Version] 1048832 [Id] WindowsEditor(7,Casey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [13728] Host "[IP] 192.168.86.207 [Port] 0 [Flags] 2 [Guid] 3614403625 [EditorId] 3614403625 [Version] 1048832 [Id] WindowsEditor(7,Casey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [13728] Host "[IP] 192.168.86.207 [Port] 0 [Flags] 2 [Guid] 3614403625 [EditorId] 3614403625 [Version] 1048832 [Id] WindowsEditor(7,Casey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 5.36 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 13.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.18f1 (1cb755715f58)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Resources/UnitySubsystems
@@ -75,11 +75,14 @@ Direct3D:
     Vendor:   Intel
     VRAM:     3942 MB
     Driver:   31.0.101.4502
+Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -94,44 +97,44 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007762 seconds.
-- Loaded All Assemblies, in  0.593 seconds
+Registered in 0.035515 seconds.
+- Loaded All Assemblies, in  3.309 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  0.414 seconds
-Domain Reload Profiling: 1004ms
-	BeginReloadAssembly (255ms)
+- Finished resetting the current domain, in  5.368 seconds
+Domain Reload Profiling: 8673ms
+	BeginReloadAssembly (653ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (211ms)
-		LoadAssemblies (250ms)
+		CreateAndSetChildDomain (11ms)
+	RebuildCommonClasses (494ms)
+	RebuildNativeTypeToScriptingClass (110ms)
+	initialDomainReloadingComplete (472ms)
+	LoadAllAssembliesAndSetupDomain (1556ms)
+		LoadAssemblies (632ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (207ms)
-			TypeCache.Refresh (204ms)
-				TypeCache.ScanAssembly (185ms)
-			BuildScriptInfoCaches (1ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (415ms)
+		AnalyzeDomain (1538ms)
+			TypeCache.Refresh (1530ms)
+				TypeCache.ScanAssembly (1443ms)
+			BuildScriptInfoCaches (2ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (5389ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (349ms)
+		SetupLoadedEditorAssemblies (4955ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (10ms)
-			ProcessInitializeOnLoadAttributes (264ms)
-			ProcessInitializeOnLoadMethodAttributes (52ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (29ms)
+			BeforeProcessingInitializeOnLoad (25ms)
+			ProcessInitializeOnLoadAttributes (3985ms)
+			ProcessInitializeOnLoadMethodAttributes (828ms)
 			AfterProcessingInitializeOnLoad (0ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (20ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
@@ -150,442 +153,181 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Loaded All Assemblies, in  2.040 seconds
-Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+- Loaded All Assemblies, in  8.151 seconds
+Refreshing native plugins compatible for Editor in 1.90 ms, found 1 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.754 seconds
-Domain Reload Profiling: 2780ms
-	BeginReloadAssembly (1349ms)
+- Finished resetting the current domain, in  5.661 seconds
+Domain Reload Profiling: 13769ms
+	BeginReloadAssembly (5488ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (30ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (58ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (524ms)
-		LoadAssemblies (597ms)
+		CreateAndSetChildDomain (372ms)
+	RebuildCommonClasses (332ms)
+	RebuildNativeTypeToScriptingClass (132ms)
+	initialDomainReloadingComplete (396ms)
+	LoadAllAssembliesAndSetupDomain (1756ms)
+		LoadAssemblies (2753ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (129ms)
-			TypeCache.Refresh (97ms)
-				TypeCache.ScanAssembly (87ms)
-			BuildScriptInfoCaches (25ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (754ms)
+		AnalyzeDomain (474ms)
+			TypeCache.Refresh (247ms)
+				TypeCache.ScanAssembly (217ms)
+			BuildScriptInfoCaches (195ms)
+			ResolveRequiredComponents (24ms)
+	FinalizeReload (5665ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (465ms)
+		SetupLoadedEditorAssemblies (4246ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (42ms)
-			ProcessInitializeOnLoadAttributes (351ms)
-			ProcessInitializeOnLoadMethodAttributes (56ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (13ms)
+			BeforeProcessingInitializeOnLoad (466ms)
+			ProcessInitializeOnLoadAttributes (3521ms)
+			ProcessInitializeOnLoadMethodAttributes (193ms)
+			AfterProcessingInitializeOnLoad (41ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+		AwakeInstancesAfterBackupRestoration (61ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 5.82 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1851 unused Assets / (378.6 KB). Loaded Objects now: 2458.
-Memory consumption went from 97.0 MB to 96.6 MB.
-Total: 10.114400 ms (FindLiveObjects: 0.623200 ms CreateObjectMapping: 0.239800 ms MarkObjects: 8.472200 ms  DeleteObjects: 0.776400 ms)
+Unloading 1851 unused Assets / (124.1 KB). Loaded Objects now: 2456.
+Memory consumption went from 98.8 MB to 98.7 MB.
+Total: 40.491200 ms (FindLiveObjects: 0.690100 ms CreateObjectMapping: 0.307300 ms MarkObjects: 35.989500 ms  DeleteObjects: 3.498100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18215.836138 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(9ff670d7bc8feda4cbaa96e9772e5dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(9ff670d7bc8feda4cbaa96e9772e5dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a0fb6976ed2f4c68219a6127f108508') in 0.01817 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 66.09 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (0 B). Loaded Objects now: 2460.
-Memory consumption went from 89.0 MB to 89.0 MB.
-Total: 59.125100 ms (FindLiveObjects: 3.195700 ms CreateObjectMapping: 0.067300 ms MarkObjects: 55.850000 ms  DeleteObjects: 0.009700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Loaded All Assemblies, in  6.749 seconds
-Refreshing native plugins compatible for Editor in 2.99 ms, found 1 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.795 seconds
-Domain Reload Profiling: 8543ms
-	BeginReloadAssembly (1239ms)
-		ExecutionOrderSort (2ms)
-		DisableScriptedObjects (77ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (103ms)
-	RebuildCommonClasses (880ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (4525ms)
-		LoadAssemblies (4673ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (798ms)
-			TypeCache.Refresh (40ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (732ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1796ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (740ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (88ms)
-			ProcessInitializeOnLoadAttributes (535ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
-			AfterProcessingInitializeOnLoad (16ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (27ms)
-Refreshing native plugins compatible for Editor in 1.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1849 unused Assets / (239.1 KB). Loaded Objects now: 2461.
-Memory consumption went from 93.0 MB to 92.8 MB.
-Total: 10.923900 ms (FindLiveObjects: 0.560200 ms CreateObjectMapping: 0.160000 ms MarkObjects: 7.942300 ms  DeleteObjects: 2.256400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Loaded All Assemblies, in  2.214 seconds
-Refreshing native plugins compatible for Editor in 1.35 ms, found 1 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.259 seconds
-Domain Reload Profiling: 3475ms
-	BeginReloadAssembly (476ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (83ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (115ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (1640ms)
-		LoadAssemblies (1656ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (167ms)
-			TypeCache.Refresh (29ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (126ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (1261ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (741ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (91ms)
-			ProcessInitializeOnLoadAttributes (535ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
-			AfterProcessingInitializeOnLoad (15ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-Refreshing native plugins compatible for Editor in 2.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1849 unused Assets / (271.7 KB). Loaded Objects now: 2461.
-Memory consumption went from 94.9 MB to 94.6 MB.
-Total: 11.221300 ms (FindLiveObjects: 0.329200 ms CreateObjectMapping: 0.353000 ms MarkObjects: 9.957500 ms  DeleteObjects: 0.578600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1851.084983 seconds.
-  path: Assets/TilesnSprites/hand.png
-  artifactKey: Guid(abeac1663d33fc8498ee43590071619a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/hand.png using Guid(abeac1663d33fc8498ee43590071619a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f203d91cd5320377010166bc979d52a5') in 0.3028972 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
+  Time since last request: 477499.513606 seconds.
   path: Assets/TilesnSprites/tiles-Sheet (1)_9.asset
   artifactKey: Guid(2272a59217069484291f5020fb524319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_9.asset using Guid(2272a59217069484291f5020fb524319) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b3468bdf0c397d738a15bc8876546877') in 0.0506871 seconds
+Start importing Assets/TilesnSprites/tiles-Sheet (1)_9.asset using Guid(2272a59217069484291f5020fb524319) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b3468bdf0c397d738a15bc8876546877') in 1.6614845 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/TilesnSprites/tileset_2.asset
+  artifactKey: Guid(a4212085b9857d940b525ce44aa9a67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_2.asset using Guid(a4212085b9857d940b525ce44aa9a67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61c12f023d27376a216e92e299541512') in 0.0068969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/TilesnSprites/tileset_9.asset
+  artifactKey: Guid(8aa35e62854720e488f39066dc0bef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_9.asset using Guid(8aa35e62854720e488f39066dc0bef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '10034ed11b67c6a03d9d17a45e909526') in 0.0147982 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000039 seconds.
-  path: Assets/TilesnSprites/New Sprite Atlas.spriteatlas
-  artifactKey: Guid(7612bcfd6df87fd46b25c0392def1905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/New Sprite Atlas.spriteatlas using Guid(7612bcfd6df87fd46b25c0392def1905) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32a722b254fd1f27a28ef2612800316b') in 0.0143767 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_3.asset
-  artifactKey: Guid(69f3f8e78b8b3f84fbab1589e17d1cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_3.asset using Guid(69f3f8e78b8b3f84fbab1589e17d1cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61b5159d20986b76ff13f5984fbd0964') in 0.0207925 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/TilesnSprites/tileset_9.asset
-  artifactKey: Guid(f8f2df0a32a6dec449743a9476616342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_9.asset using Guid(f8f2df0a32a6dec449743a9476616342) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ee4362d18495898a6abd224a6d5b614') in 0.0229619 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/TilesnSprites/tileset_1.asset
-  artifactKey: Guid(b51aa28aa3e8fb64a94ecea0df30345e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_1.asset using Guid(b51aa28aa3e8fb64a94ecea0df30345e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89a3420887a3e2070b14776c432d7ead') in 0.0385511 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/TilesnSprites/tileset.asset
-  artifactKey: Guid(fcc30c5036e717647855fbe0aedfff69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset.asset using Guid(fcc30c5036e717647855fbe0aedfff69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '374fb138e24f77195b928bfb24be9764') in 0.0040497 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_0.asset
-  artifactKey: Guid(22df42fb6338f8c4482e6fee5c005f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_0.asset using Guid(22df42fb6338f8c4482e6fee5c005f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5936fc75a6b778c2b90b9374180a6527') in 0.0242242 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000676 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_13.asset
-  artifactKey: Guid(1d763a23fa021f24688c04bd959f626b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_13.asset using Guid(1d763a23fa021f24688c04bd959f626b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '035047648f4f319b2eadb00c6f9d6c6e') in 0.0237522 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_2.asset
-  artifactKey: Guid(69c75da3d653fe64eadfa178331862e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_2.asset using Guid(69c75da3d653fe64eadfa178331862e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed2e457b8aac15670fc86c60cc8be5d0') in 0.0246997 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_14.asset
-  artifactKey: Guid(d5d52795a51391c4eb3743008762fcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_14.asset using Guid(d5d52795a51391c4eb3743008762fcd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21606fa7a2f483db02eee61d23485adc') in 0.0257496 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/TilesnSprites/tileset_6.asset
-  artifactKey: Guid(7ee21a41f79e42749a2da3a161273212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_6.asset using Guid(7ee21a41f79e42749a2da3a161273212) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2419fbd57123cc1ee62e943b211070b4') in 0.0364156 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/TilesnSprites/tileset_5.asset
-  artifactKey: Guid(73bfb3f278508b6489c1fbc57bef1cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_5.asset using Guid(73bfb3f278508b6489c1fbc57bef1cab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce22dc3c42fe725835ffab104ae7f5e9') in 0.0344285 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_11.asset
-  artifactKey: Guid(d0471ade5d0d7624db43d52be07175c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_11.asset using Guid(d0471ade5d0d7624db43d52be07175c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '78140b62efe95aa7ad89d35a4c02d15e') in 0.0196637 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_1.asset
-  artifactKey: Guid(85bab92f93f306943bb1f5e8d658f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_1.asset using Guid(85bab92f93f306943bb1f5e8d658f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd66bd1708e84bce445dfc6771bb4e7ee') in 0.023767 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_6.asset
-  artifactKey: Guid(513548e3c19ab5741a4d50d393e63f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_6.asset using Guid(513548e3c19ab5741a4d50d393e63f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3dafbfe524f744aaa5bc4f90c07266a6') in 0.0229007 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_12.asset
-  artifactKey: Guid(af73674353ad2d9418d38dbf9b60c557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_12.asset using Guid(af73674353ad2d9418d38dbf9b60c557) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25f2867decb741cecc481f248b678de6') in 0.0207386 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/TilesnSprites/tileset_0.asset
-  artifactKey: Guid(76aafaae2b7d7094fa16d1eb93678c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_0.asset using Guid(76aafaae2b7d7094fa16d1eb93678c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd21add6bf2388cdb2e24c4fdfc8d438c') in 0.0266026 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/TilesnSprites/tiles-Sheet (1)_5.asset
-  artifactKey: Guid(295790f474b1ff74c8b91722ec153793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tiles-Sheet (1)_5.asset using Guid(295790f474b1ff74c8b91722ec153793) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cd7af0e4ad41112f57cd369c0566d4b') in 0.024972 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/TilesnSprites/New Palette.prefab
-  artifactKey: Guid(13e32c673238afd419912d14b7248195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/New Palette.prefab using Guid(13e32c673238afd419912d14b7248195) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '369631359bb5960ea1a633400f7fec0a') in 0.1884695 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/TilesnSprites/tileset_8.asset
-  artifactKey: Guid(5d11eed207b5fa54d86dc39d2172ee18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_8.asset using Guid(5d11eed207b5fa54d86dc39d2172ee18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '44648e485a8f4c5db7d71e7b6ef7188a') in 0.041565 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
   path: Assets/TilesnSprites/player-arm.png
-  artifactKey: Guid(83853472e7757194094e23c67b78d915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/player-arm.png using Guid(83853472e7757194094e23c67b78d915) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0fc4066a55548299aefd27290a31844d') in 0.067311 seconds
+  artifactKey: Guid(c2952104ce213634f93d5386339ee620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/player-arm.png using Guid(c2952104ce213634f93d5386339ee620) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c5f6c49564cb34b077d14f97e1bf0dd6') in 0.2846854 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/TilesnSprites/tileset_4.asset
-  artifactKey: Guid(68cc5494074436a4a8462078d7b74085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_4.asset using Guid(68cc5494074436a4a8462078d7b74085) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b53331b14aa2c500a0d2a258d942f501') in 0.0340841 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.000187 seconds.
+  path: Assets/TilesnSprites/tileset_6.asset
+  artifactKey: Guid(774597c2aa7355f418ad1cb799458045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_6.asset using Guid(774597c2aa7355f418ad1cb799458045) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f220ed96f5a1a21086190fcf0c0b8a9') in 0.0200831 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/TilesnSprites/tileset_7.asset
+  artifactKey: Guid(12cad22014967d54492b94d2295fb440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_7.asset using Guid(12cad22014967d54492b94d2295fb440) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '871efc4e7e700cc4d077473467435f32') in 0.0088528 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/TilesnSprites/tileset_5.asset
+  artifactKey: Guid(88f63fec892fca9428e15acf9fb4bb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_5.asset using Guid(88f63fec892fca9428e15acf9fb4bb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd72dbfbf8279c36ed7944efe634bfa8') in 0.0074309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/TilesnSprites/tiles-Sheet (1)_11.asset
+  artifactKey: Guid(d0471ade5d0d7624db43d52be07175c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tiles-Sheet (1)_11.asset using Guid(d0471ade5d0d7624db43d52be07175c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '78140b62efe95aa7ad89d35a4c02d15e') in 0.0875128 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/TilesnSprites/tiles-Sheet (1)_1.asset
+  artifactKey: Guid(85bab92f93f306943bb1f5e8d658f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tiles-Sheet (1)_1.asset using Guid(85bab92f93f306943bb1f5e8d658f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd66bd1708e84bce445dfc6771bb4e7ee') in 0.1057776 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
-  path: Assets/TilesnSprites/tileset_10.asset
-  artifactKey: Guid(f76822464bd47f349aab299dc541b092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TilesnSprites/tileset_10.asset using Guid(f76822464bd47f349aab299dc541b092) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d42d4a52f3c096442208102940ac4b7') in 0.0291577 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  path: Assets/TilesnSprites/tiles-Sheet (1)_12.asset
+  artifactKey: Guid(af73674353ad2d9418d38dbf9b60c557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tiles-Sheet (1)_12.asset using Guid(af73674353ad2d9418d38dbf9b60c557) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25f2867decb741cecc481f248b678de6') in 0.2531351 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Loaded All Assemblies, in  0.587 seconds
-Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.083 seconds
-Domain Reload Profiling: 1668ms
-	BeginReloadAssembly (227ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (266ms)
-		LoadAssemblies (326ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (64ms)
-			TypeCache.Refresh (5ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (53ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (1084ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (687ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (527ms)
-			ProcessInitializeOnLoadMethodAttributes (67ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (26ms)
-Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 1851 unused Assets / (493.8 KB). Loaded Objects now: 2476.
-Memory consumption went from 97.3 MB to 96.9 MB.
-Total: 8.281400 ms (FindLiveObjects: 0.374200 ms CreateObjectMapping: 0.234700 ms MarkObjects: 6.843700 ms  DeleteObjects: 0.805700 ms)
+Received Import Request.
+  Time since last request: 0.003828 seconds.
+  path: Assets/TilesnSprites/tileset_1.asset
+  artifactKey: Guid(ae768f479ada978459e4089195738e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_1.asset using Guid(ae768f479ada978459e4089195738e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25b65e6822a9e0ec4f7bfe8db1e10f53') in 0.0255732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/TilesnSprites/tileset_4.asset
+  artifactKey: Guid(5a215861ddca386478caaa801f5883ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_4.asset using Guid(5a215861ddca386478caaa801f5883ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af36128be78bcb7c587667a80aa442ea') in 0.0665178 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005216 seconds.
+  path: Assets/TilesnSprites/tiles-Sheet (1)_5.asset
+  artifactKey: Guid(295790f474b1ff74c8b91722ec153793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tiles-Sheet (1)_5.asset using Guid(295790f474b1ff74c8b91722ec153793) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cd7af0e4ad41112f57cd369c0566d4b') in 0.3357891 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001545 seconds.
+  path: Assets/TilesnSprites/tileset.png
+  artifactKey: Guid(b94653c33e4bb254fa67e4e4c5f82bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset.png using Guid(b94653c33e4bb254fa67e4e4c5f82bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e86a22b510680ef1f0e20f4fbd22060') in 0.5440969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000826 seconds.
+  path: Assets/TilesnSprites/tileset.asset
+  artifactKey: Guid(a0e4371e28163f6479c9af2f7c1b21c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset.asset using Guid(a0e4371e28163f6479c9af2f7c1b21c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a8c2819a68bf79f79d6d49f66caf4b90') in 0.0090861 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/TilesnSprites/tileset_10.asset
+  artifactKey: Guid(aa6a065c7c108714fae01b4ed566b1d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilesnSprites/tileset_10.asset using Guid(aa6a065c7c108714fae01b4ed566b1d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c739ecd15ef61f846fb8670b98d6ede1') in 0.0056359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

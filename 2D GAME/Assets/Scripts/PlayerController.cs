@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private float bufferTime = 0.2f;
     private float bufferTracker;
+
+    private bool onLadder = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,14 +46,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        }
-        if(collision.gameObject.tag.StartsWith("Key") && gameObject.transform.GetChild(0).gameObject.activeSelf)
-        {
-            keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
-            Destroy(collision.gameObject);
         }
         if(collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
@@ -59,8 +57,28 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag == "Ladder") {
+            onLadder = true;
+        }
+        if (collision.gameObject.tag.StartsWith("Key") && gameObject.transform.GetChild(0).gameObject.activeSelf)
+        {
+            keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
+            Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Ladder") {
+            onLadder = false;
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
+    }
     void DecideGravity() {
-        if (rb.velocity.y < -15f) {
+        if (onLadder) {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, 10*Input.GetAxis("Vertical"));
+        } else if (rb.velocity.y < -15f) {
             rb.velocity = new Vector2(rb.velocity.x, -15);
         } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
             rb.gravityScale = 4f;

@@ -24,7 +24,7 @@ public class LandResetter : MonoBehaviour
         {
             //Debug.LogWarning("hit f=g=orubd");
             player.GetComponent<PlayerController>().grounded = true;
-            player.GetComponent<PlayerController>().dubjump = true;
+            //player.GetComponent<PlayerController>().dubjump = true;
             //Destroy(gameObject);
         }
     }
