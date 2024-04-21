@@ -12120,3 +12120,5 @@ crashlytics-build.properties
 2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-5.log
 2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-6.log
 2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-7.log
+*.pref
+*.log
