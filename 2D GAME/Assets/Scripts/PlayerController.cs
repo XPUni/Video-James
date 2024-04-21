@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    //animator. For animation purposes
+    public Animator animator;
+
     public List<char> keys = new List<char>();
     public bool grounded = false;
     public bool dubjump = true;
@@ -95,6 +98,12 @@ public class PlayerController : MonoBehaviour
         else { horizontal_top_speed = 5f; }
 
         horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
+        if(horizontal_target_speed!=0){
+            animator.SetBool("isMove",true);
+        }
+        else{
+            animator.SetBool("isMove",false);
+        }
         rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
         if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
         else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
