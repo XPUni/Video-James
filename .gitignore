@@ -11075,3 +11075,20 @@ crashlytics-build.properties
 2D GAME/Temp/FSTimeGet-e214412e335be5046acd82ec002be337
 2D GAME/Temp/UnityLockfile
 2D GAME/Temp/workerlic
+*.log
+2D GAME/Logs/AssetImportWorker2.log
+2D GAME/Logs/AssetImportWorker3.log
+2D GAME/Logs/shadercompiler-AssetImportWorker2-0.log
+2D GAME/Logs/shadercompiler-AssetImportWorker3-0.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-0.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-1.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-10.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-11.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-2.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-3.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-4.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-5.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-6.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-7.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-8.log
+2D GAME/Logs/shadercompiler-UnityShaderCompiler.exe-9.log
