@@ -110,8 +110,9 @@ public class PlayerController : MonoBehaviour
     }
     void Jump()
     {
+        animator.SetBool("isJump", true);
         bufferTracker = 0f;
         rb.velocity = new Vector2(rb.velocity.x, 10f);
-        if (grounded) { grounded = false; } else { dubjump = false; }
+        if (grounded) {grounded = false; } else { dubjump = false; }
     }
 }
