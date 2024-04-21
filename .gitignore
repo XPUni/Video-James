@@ -71,3 +71,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /2D GAME/Library
+/2D GAME/Library
+/2D GAME/Logs
+/2D GAME/Logs
+2D GAME/Logs/shadercompiler-UnityShaderCompiler-3.log
+/2D GAME/Library
+/2D GAME/Temp
