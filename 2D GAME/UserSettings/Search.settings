@@ -1,13 +1,16 @@
 trackSelection = true
 refreshSearchWindowsInPlayMode = false
 fetchPreview = true
-defaultFlags = 0
+defaultFlags = 264
 keepOpen = false
 queryFolder = "Assets"
 onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.8DF93126" = "packages"
+	"OpenInspectorPreview.8DF93126" = "0"
+	"currentGroup.8DF93126" = "all"
 }
 providers = {
 	find = {
@@ -64,6 +67,9 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"URP"
+	"2D Render"
+	"2D light"
 ]
 searchItemFavorites = [
 ]
