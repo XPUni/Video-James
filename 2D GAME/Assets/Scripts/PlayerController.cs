@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public Animator animator;
     public List<char> keys = new List<char>();
-    public bool grounded = false;
-    public bool dubjump = true;
+    public bool grounded = true;
     private Rigidbody2D rb;
 
     private float horizontal_top_speed;
@@ -27,10 +28,22 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
+    public bool IsGrounded() {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y-0.6f), 0.45f); // Adjust radius as needed
+        foreach (Collider2D collider in colliders) {
+            if (collider.gameObject.tag == "Ground") {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) {SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
+        grounded = IsGrounded();
+        animator.SetBool("isJump",!grounded);
         // coyote time and jump buffering
         if (grounded) {coyoteTracker = coyoteTime;} else { coyoteTracker -= Time.deltaTime; }
         if (Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.W)) { bufferTracker = bufferTime; } else { bufferTracker -= Time.deltaTime; }
@@ -40,13 +53,13 @@ public class PlayerController : MonoBehaviour
         }
         DecideGravity();
         Walk();
-        if (bufferTracker > 0f && (coyoteTracker > 0f || dubjump)) { Jump(); }
+        if (bufferTracker > 0f && (coyoteTracker > 0f)) { Jump(); }
     }
     
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -58,9 +71,12 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.tag == "Ladder") {
-            onLadder = true;
+        //Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
+            float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y/2+collision.gameObject.transform.position.y;
+            if (grounded || transform.position.y > ladderTop) {
+                onLadder = true;
+            }
         }
         if (collision.gameObject.tag.StartsWith("Key") && gameObject.transform.GetChild(0).gameObject.activeSelf)
         {
@@ -69,9 +85,9 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Ladder") {
+        if (collision.gameObject.tag == "Ladder"  && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             onLadder = false;
-            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y/3);
         }
     }
     void DecideGravity() {
@@ -93,8 +109,12 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded) { horizontal_top_speed = 8f; }
         else { horizontal_top_speed = 5f; }
-
+        
         horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
+        if(horizontal_target_speed!=0){
+            animator.SetBool("isMove",true);
+        }
+        else{animator.SetBool("isMove", false);}
         rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
         if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
         else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
@@ -103,6 +123,6 @@ public class PlayerController : MonoBehaviour
     {
         bufferTracker = 0f;
         rb.velocity = new Vector2(rb.velocity.x, 10f);
-        if (grounded) { grounded = false; } else { dubjump = false; }
+        grounded = false;
     }
 }
