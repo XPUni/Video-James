@@ -8,6 +8,7 @@ TagManager:
   - Key1
   - Door1
   - Ladder
+  - Ground
   layers:
   - Default
   - TransparentFX
