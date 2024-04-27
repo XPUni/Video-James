@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            //animator.SetTrigger("gottenArm");
         }
         if(collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
