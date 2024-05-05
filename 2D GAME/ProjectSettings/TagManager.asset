@@ -11,6 +11,11 @@ TagManager:
   - Ground
   - SecondEar
   - earPod
+  - LevelExit
+  - PlayerEyes
+  - PlayerEars
+  - PlayerMouth
+  - PlayerNose
   layers:
   - Default
   - TransparentFX

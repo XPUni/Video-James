@@ -26,11 +26,22 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Scene scene = SceneManager.GetActiveScene();
-        if(scene.buildIndex!=0){
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        if(scene.buildIndex>0){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-        else{
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if(scene.buildIndex>1){
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        if(scene.buildIndex>2){
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if(scene.buildIndex>3){
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
         }
         
     }
@@ -72,10 +83,18 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
         }
+        if(collision.gameObject.tag == "SecondEar"){
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
         if(collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
             keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.tag == "LevelExit"){
+            if(gameObject.transform.GetChild(2).gameObject.activeSelf   ){
+                Destroy(collision.gameObject);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) {
