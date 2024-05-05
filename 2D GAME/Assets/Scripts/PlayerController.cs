@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
+    public bool hasEarPod = false;
     private Rigidbody2D rb;
 
     private float horizontal_top_speed;
