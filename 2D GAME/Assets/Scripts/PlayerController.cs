@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
@@ -25,7 +24,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        Scene scene = SceneManager.GetActiveScene();
+        if(scene.buildIndex!=0){
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else{
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        
     }
 
     public bool IsGrounded() {
