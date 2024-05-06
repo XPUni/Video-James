@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private static bool triggerThisFrame = false;
 
     private bool onLadder = false;
+
+    public KeyTracker key_tracker;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,25 +41,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         return false;
-    }
-
-    void DrawKeys() {
-        GameObject canvas = GameObject.Find("Canvas");
-
-        foreach (Transform child in canvas.transform) {
-            Debug.Log(child.name);
-            if (child.name.StartsWith("key")) {
-                Destroy(child);
-            }
-        }
-        float xpos = 0;
-        foreach (char k in keys) {
-            GameObject NewObj = new GameObject(); //Create the GameObject
-            Image NewImage = NewObj.AddComponent<Image>(); //Add the Image Component script
-            NewImage.sprite = currentSprite; //Set the Sprite of the Image Component on the new GameObject
-            NewObj.GetComponent<RectTransform>().SetParent(ParentPanel.transform); //Assign the newly created Image GameObject as a Child of the Parent Panel.
-            NewObj.SetActive(true); //Activate the GameObject
-        }
     }
 
     // Update is called once per frame
@@ -91,7 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
-            DrawKeys();
+            key_tracker.DrawKeys();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -109,7 +92,7 @@ public class PlayerController : MonoBehaviour
         {
             keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
-            DrawKeys();
+            key_tracker.DrawKeys();
         }
     }
     private void OnTriggerExit2D(Collider2D collision) {
