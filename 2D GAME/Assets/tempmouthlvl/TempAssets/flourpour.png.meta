@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2865a7eba844d164d968bf946c504d03
+guid: 022204bd3a48f4791a58cab28045223f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -93,29 +93,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door-Sheet_0
+      name: flourpour_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07327c5987ff54b48a12d370f3bdb7d1
-      internalID: -391052865
+      spriteID: a75b85dd9ddd0450d872eeb4980937d5
+      internalID: 1547215603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_1
+      name: flourpour_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 32
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,8 +132,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2dc34eb0fafae54398800ff949ce59c
-      internalID: 1975119178
+      spriteID: 87ea047ef53674a51b005f1e519314a0
+      internalID: 663368119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flourpour_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78661e9255ebc4be192c088fffb49ce3
+      internalID: 1827510148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flourpour_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c4846a4366b4eb792af1caa2804b13
+      internalID: -390531064
       vertices: []
       indices: 
       edges: []
@@ -154,7 +183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 3b5e4df8a375145cab6ec600ac6b62d8
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door-Sheet_0: -391052865
-      door-Sheet_1: 1975119178
+      flourpour_0: 1547215603
+      flourpour_1: 663368119
+      flourpour_2: 1827510148
+      flourpour_3: -390531064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

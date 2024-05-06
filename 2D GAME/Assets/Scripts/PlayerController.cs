@@ -21,6 +21,13 @@ public class PlayerController : MonoBehaviour
     private float bufferTracker;
 
     private bool onLadder = false;
+
+    public bool hasArm = true;
+    public bool tiny = false;
+    public float tinyTimer = 6f;
+    public float tinyTime = 0f;
+    public GameObject cake;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +66,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //added
+        if (tiny)
+        {
+            Tiny();
+            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            CapsuleCollider2D collider = gameObject.GetComponent<CapsuleCollider2D>();
+            collider.size = new Vector2(0.5f, 1);
+        }
+        if (hasArm)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        //^^
         if (Input.GetKeyDown(KeyCode.R)) {SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
         grounded = IsGrounded();
         animator.SetBool("isJump",!grounded);
@@ -95,6 +120,11 @@ public class PlayerController : MonoBehaviour
             if(gameObject.transform.GetChild(2).gameObject.activeSelf   ){
                 Destroy(collision.gameObject);
             }
+        if(collision.gameObject.name == "Cake")
+        {
+            cake = collision.gameObject;
+            collision.gameObject.SetActive(false);
+            tiny = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -143,8 +173,18 @@ public class PlayerController : MonoBehaviour
         }
         else{animator.SetBool("isMove", false);}
         rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
-        if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
-        else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
+        //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
+        //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
+        if (tiny)
+        {
+            if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); }
+            else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); }
+        }
+        else
+        {
+            if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1, 1, 1); }
+            else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1, 1, 1); }
+        }
     }
     void Jump()
     {
@@ -152,5 +192,19 @@ public class PlayerController : MonoBehaviour
         bufferTracker = 0f;
         rb.velocity = new Vector2(rb.velocity.x, 10f);
         grounded = false;
+    }
+
+    void Tiny()
+    {
+        tiny = true;
+        tinyTime += Time.deltaTime;
+
+        if(tinyTime > tinyTimer)
+        {
+            tiny = false;
+            cake.SetActive(true);
+            tinyTime = 0f;
+        }
+
     }
 }
