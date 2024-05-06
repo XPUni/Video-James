@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class PlayerController : MonoBehaviour
     private float bufferTime = 0.2f;
     private float bufferTracker;
 
+    private static bool triggerThisFrame = false;
+
     private bool onLadder = false;
+
+    public KeyTracker key_tracker;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +54,7 @@ public class PlayerController : MonoBehaviour
     public bool IsGrounded() {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y-0.6f), 0.45f); // Adjust radius as needed
         foreach (Collider2D collider in colliders) {
-            if (collider.gameObject.tag == "Ground") {
+            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door")) {
                 return true;
             }
         }
@@ -59,6 +64,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        triggerThisFrame = false;
         if (Input.GetKeyDown(KeyCode.R)) {SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
         grounded = IsGrounded();
         animator.SetBool("isJump",!grounded);
@@ -90,6 +96,7 @@ public class PlayerController : MonoBehaviour
         {
             keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
+            key_tracker.DrawKeys();
         }
         if(collision.gameObject.tag == "LevelExit"){
             if(gameObject.transform.GetChild(2).gameObject.activeSelf   ){
@@ -99,6 +106,9 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         //Debug.Log(collision.gameObject.name);
+        if (triggerThisFrame) { return; }
+        triggerThisFrame = true;
+
         if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y/2+collision.gameObject.transform.position.y;
             if (grounded || transform.position.y > ladderTop) {
@@ -109,6 +119,7 @@ public class PlayerController : MonoBehaviour
         {
             keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
+            key_tracker.DrawKeys();
         }
     }
     private void OnTriggerExit2D(Collider2D collision) {

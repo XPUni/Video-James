@@ -9,13 +9,11 @@ TagManager:
   - Door1
   - Ladder
   - Ground
-  - SecondEar
-  - earPod
-  - LevelExit
-  - PlayerEyes
-  - PlayerEars
-  - PlayerMouth
-  - PlayerNose
+  - Key2
+  - Door2
+  - Eye
+  - Key3
+  - Door3
   layers:
   - Default
   - TransparentFX
