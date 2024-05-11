@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e106efd4683ef747875666a1eabd746
+guid: 9164ae09b72ab44838c5a2aa47e700f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -93,24 +93,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-Sheet_0
+      name: eggcrack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1cd3bcd8b995554cb64d56e12778b55
-      internalID: 609275164
+      spriteID: a37f05355c2d6458fbeada24b0ada2d2
+      internalID: -1905211025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-Sheet_1
+      name: eggcrack_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d595d01b768c7b49aab6a348db3ee16
-      internalID: 2080388566
+      spriteID: 509b96a8700a647a7ab9a41315186232
+      internalID: -1849291964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-Sheet_2
+      name: eggcrack_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5434f78ee981645a0ef08ad1128e8d
-      internalID: -1135087962
+      spriteID: ce0a1425ec3b54c859655dd684e13e43
+      internalID: -1501524133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-Sheet_3
+      name: eggcrack_3
       rect:
         serializedVersion: 2
         x: 192
@@ -187,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 072ff6ee419ed404bb6e48aa4a3d4057
-      internalID: 1818375
+      spriteID: f62b4735d11bd433597a26cea921065c
+      internalID: 1616450317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-Sheet_4
+      name: eggcrack_4
       rect:
         serializedVersion: 2
         x: 256
@@ -208,8 +195,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34712a3923872c447b819846b531f355
-      internalID: 1064279029
+      spriteID: 40ca2affc68fb476588c1c24db4913cb
+      internalID: -1796208924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eggcrack_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a6be40f74344424ac6c58ca717d423
+      internalID: -424183813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eggcrack_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad9a075dfc1f422dbd2850c5f432973
+      internalID: 562362658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eggcrack_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74985c0b17119416493a72a656e2ba0e
+      internalID: 902285339
       vertices: []
       indices: 
       edges: []
@@ -217,7 +267,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ac8d214af40744efa94c8cee2ad8a362
     internalID: 0
     vertices: []
     indices: 
@@ -225,11 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player-Sheet_0: 609275164
-      player-Sheet_1: 2080388566
-      player-Sheet_2: -1135087962
-      player-Sheet_3: 1818375
-      player-Sheet_4: 1064279029
+      eggcrack_0: -1905211025
+      eggcrack_1: -1849291964
+      eggcrack_2: -1501524133
+      eggcrack_3: 1616450317
+      eggcrack_4: -1796208924
+      eggcrack_5: -424183813
+      eggcrack_6: 562362658
+      eggcrack_7: 902285339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
