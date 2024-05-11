@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.SetActive(false);
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        gameObject.transform.GetChild(6).gameObject.SetActive(false);
         Debug.Log(scene.buildIndex);
         if(scene.buildIndex>0){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -122,16 +123,27 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
         }
+
         if(collision.gameObject.tag == "SecondEar"){
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
-        if(collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
+        
+        if (collision.gameObject.tag == "GetNose")
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        }
+        if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
+        //if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
+
         {
             if (!openedDoorThisFrame) {
                 openedDoorThisFrame = true;
                 keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
                 Destroy(collision.gameObject);
-                key_tracker.DrawKeys();
+                if(key_tracker != null)
+                {
+                    key_tracker.DrawKeys();
+                }
             }
         }
         if(collision.gameObject.tag == "LevelExit"){
@@ -149,6 +161,16 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(collision.gameObject.name);
         if (triggerThisFrame) { return; }
         triggerThisFrame = true;
+        if (collision.gameObject.tag == "DogNose")
+        {
+            gameObject.transform.GetChild(6).gameObject.SetActive(true);
+        }
+        if (collision.gameObject.tag == "DogNoseRemove")
+        {
+            gameObject.transform.GetChild(6).gameObject.SetActive(false);
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
 
         if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y/2+collision.gameObject.transform.position.y;
@@ -156,11 +178,18 @@ public class PlayerController : MonoBehaviour
                 onLadder = true;
             }
         }
+        if(collision.gameObject.tag == "Stinky" &&(gameObject.transform.GetChild(6).gameObject.activeSelf || gameObject.transform.GetChild(4).gameObject.activeSelf))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        }
+
         if (collision.gameObject.tag.StartsWith("Key") && gameObject.transform.GetChild(0).gameObject.activeSelf)
         {
             keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             Destroy(collision.gameObject);
-            key_tracker.DrawKeys();
+            if(key_tracker != null) {
+                key_tracker.DrawKeys();
+            }
         }
         if (collision.gameObject.tag == "EndOfLevel") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

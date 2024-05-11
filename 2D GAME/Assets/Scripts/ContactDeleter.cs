@@ -24,10 +24,11 @@ public class ContactDeleter : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerHand")
+        if (collision.gameObject.tag == "PlayerHand" && gameObject.tag != "DogNose")
         {
             if(gameObject.tag == "earPod"){
                 collision.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().hasEarPod = true;
@@ -40,6 +41,13 @@ public class ContactDeleter : MonoBehaviour
             }
             //player.GetComponent<PlayerController>().key1 = true;    
             Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Player" && gameObject.tag == "DogNose")
+        {
+            if (gameObject.transform.childCount != 0)
+            {
+                Destroy(gameObject.transform.GetChild(0).gameObject);
+            }
         }
     }
 }
