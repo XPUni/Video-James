@@ -22,8 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private bool onLadder = false;
 
-    public bool hasArm = true;
-    public bool tiny = false;
+    public KeyTracker key_tracker;
+    public bool hasArm = false;
+    private bool tiny;  
     public float tinyTimer = 6f;
     public float tinyTime = 0f;
     public GameObject cake;
@@ -128,38 +129,75 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-        private void OnTriggerEnter2D(Collider2D collision) {
-            //Debug.Log(collision.gameObject.name);
-            if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
-                float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y / 2 + collision.gameObject.transform.position.y;
-                if (grounded || transform.position.y > ladderTop) {
-                    onLadder = true;
-                }
-            }
-            if (collision.gameObject.tag.StartsWith("Key") && gameObject.transform.GetChild(0).gameObject.activeSelf)
-            {
-                keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
-                Destroy(collision.gameObject);
-            }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
+            onLadder = false;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
         }
-        private void OnTriggerExit2D(Collider2D collision) {
-            if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
-                onLadder = false;
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
-            }
+    }
+
+    void DecideGravity() {
+        if (onLadder) {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, 10*Input.GetAxis("Vertical"));
+        } else if (rb.velocity.y < -15f) {
+            rb.velocity = new Vector2(rb.velocity.x, -15);
+        } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
+            rb.gravityScale = 4f;
+        } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
+            rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
+        } else if (rb.velocity.y >= 0.5f) {
+            rb.gravityScale = 1.6f;
         }
-        void DecideGravity() {
-            if (onLadder) {
-                rb.gravityScale = 0f;
-                rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
-            } else if (rb.velocity.y < -15f) {
-                rb.velocity = new Vector2(rb.velocity.x, -15);
-            } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
-                rb.gravityScale = 4f;
-            } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
-                rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
-            } else if (rb.velocity.y >= 0.5f) {
-                rb.gravityScale = 1.6f;
+    }
+
+
+    void Walk()
+    {
+        if (grounded) { horizontal_top_speed = 6f; }
+        else { horizontal_top_speed = 5f; }
+        
+        horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
+        if(horizontal_target_speed!=0){
+            animator.SetBool("isMove",true);
+        }
+        else{animator.SetBool("isMove", false);}
+        rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
+        //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
+        //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
+        if (tiny)
+        {
+            if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); }
+            else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); }
+        }
+        else
+        {
+            if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1, 1, 1); }
+            else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1, 1, 1); }
+        }
+    }
+    void Jump()
+    {
+        animator.SetBool("isJump", true);
+        bufferTracker = 0f;
+        rb.velocity = new Vector2(rb.velocity.x, 10f);
+        grounded = false;
+        coyoteTracker = 0f;
+    }
+
+    void Tiny()
+    {
+        Dictionary<GameObject, float>.KeyCollection cakesColl = cakes.Keys;
+        List<GameObject> cakesList = new List<GameObject>();
+        foreach (GameObject cake in cakesColl) {
+            cakesList.Add(cake);
+        }
+        foreach (GameObject cake in cakesList) {
+            if (cakes[cake] > 0f) { cakes[cake] -= Time.deltaTime; }
+            else {
+                cakes.Remove(cake);
+                cake.SetActive(true);
             }
         }
 
