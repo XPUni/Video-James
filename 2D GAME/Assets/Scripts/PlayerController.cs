@@ -114,9 +114,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
         }
-        if (collision.gameObject.tag == "SecondEar") {
-            gameObject.transform.GetChild(2).gameObject.SetActive(true);
-        }
+        
         
         if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
@@ -147,6 +145,10 @@ public class PlayerController : MonoBehaviour
             {
                 keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
                 Destroy(collision.gameObject);
+            }
+            if (collision.gameObject.tag == "SecondEar" && hasEarPod) {
+                gameObject.transform.GetChild(2).gameObject.SetActive(true);
+                Debug.Log("Ears should be on");
             }
             if(collision.gameObject.tag=="enterDarkness"){
                 Debug.Log("I entered darkness");
