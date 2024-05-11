@@ -16,7 +16,10 @@ public class MouthLvl : MonoBehaviour
     public GameObject milk0;
     public GameObject milk1;
 
-    public int ingredientTotal = 0;
+    public bool gotEgg = false;
+    public bool gotMilk = false; //haha like the ad
+    public bool gotSugar = false;
+    public bool gotFlour = false;
     public GameObject ingredients;
     public GameObject returnText;
 
@@ -35,7 +38,7 @@ public class MouthLvl : MonoBehaviour
             Timer();
         }
 
-        if (ingredientTotal == 4)
+        if (gotEgg && gotFlour && gotMilk && gotSugar)
         {
             ingredients.SetActive(false);
             returnText.SetActive(true);
@@ -50,28 +53,28 @@ public class MouthLvl : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 egg0.SetActive(false);
                 egg1.SetActive(true);
-                ingredientTotal++;
+                gotEgg = true;
                 break;
             case "Flour":
                 collision.gameObject.SetActive(false);
                 flour0.SetActive(false);
                 flour1.SetActive(true);
-                ingredientTotal++;
+                gotFlour = true;
                 break;
             case "Sugar":
                 collision.gameObject.SetActive(false);
                 sugar0.SetActive(false);
                 sugar1.SetActive(true);
-                ingredientTotal++;
+                gotSugar = true; 
                 break;
             case "Milk":
                 collision.gameObject.SetActive(false);
                 milk0.SetActive(false);
                 milk1.SetActive(true);
-                ingredientTotal++;
+                gotMilk = true; 
                 break;
             case "Bowl":
-                if(ingredientTotal == 4)
+                if (gotEgg && gotFlour && gotMilk && gotSugar)
                 {
                     complete = true;
                     collision.gameObject.SetActive(false);
@@ -92,7 +95,7 @@ public class MouthLvl : MonoBehaviour
         if (clock.activeSelf)
         {
             lvlTimer -= Time.deltaTime;
-            timeText.text = (Mathf.RoundToInt(lvlTimer).ToString());
+            timeText.text = (Mathf.Floor(lvlTimer/60).ToString()+':'+Mathf.Floor(lvlTimer%60).ToString().PadLeft(2,'0'));
             //timeText.text = (Mathf.RoundToInt(lvlTimer.ToString()));
 
             if (lvlTimer <= 0.0f)
