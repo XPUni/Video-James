@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject levelExitClose;
+    public GameObject levelExitOpen;
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
     public bool hasEarPod = false;
     private Rigidbody2D rb;
+    private GameObject light;
 
     private float horizontal_top_speed;
     private float horizontal_target_speed;
@@ -36,6 +39,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //levelExitOpen.SetActive(false);
+        if(gameObject.transform.GetChild(6).gameObject.name == "playerLight"){
+            light = gameObject.transform.GetChild(6).gameObject;
+            light.SetActive(false);
+        }
+        
         Scene scene = SceneManager.GetActiveScene();
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         gameObject.transform.GetChild(1).gameObject.SetActive(false);
@@ -117,18 +126,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "LevelExit" && !levelExitClose.activeSelf){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            Debug.Log("Should be going to next scene");
+        }
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
-        }
-
-        if(collision.gameObject.tag == "SecondEar"){
-            gameObject.transform.GetChild(2).gameObject.SetActive(true);
-        }
+        }        
         
-        if (collision.gameObject.tag == "GetNose")
+        if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
             gameObject.transform.GetChild(4).gameObject.SetActive(true);
         }
@@ -144,11 +153,6 @@ public class PlayerController : MonoBehaviour
                 {
                     key_tracker.DrawKeys();
                 }
-            }
-        }
-        if(collision.gameObject.tag == "LevelExit"){
-            if(gameObject.transform.GetChild(2).gameObject.activeSelf   ){
-                Destroy(collision.gameObject);
             }
         }
         if(collision.gameObject.name == "Cake")
@@ -194,6 +198,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "EndOfLevel") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if (collision.gameObject.tag == "SecondEar" && hasEarPod) {
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            levelExitClose.SetActive(false);
+                
+        }
+        if(collision.gameObject.tag=="enterDarkness"){
+            Debug.Log("I entered darkness");
+            light.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
@@ -204,6 +217,30 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
+            onLadder = false;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
+        }
+        if(collision.gameObject.tag=="enterDarkness"){
+            Debug.Log("I exited darkness");
+            light.SetActive(false);
+        }
+    }
+    void DecideGravity() {
+            if (onLadder) {
+                rb.gravityScale = 0f;
+                rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
+            } else if (rb.velocity.y < -15f) {
+                rb.velocity = new Vector2(rb.velocity.x, -15);
+            } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
+                rb.gravityScale = 4f;
+            } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
+                rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
+            } else if (rb.velocity.y >= 0.5f) {
+                rb.gravityScale = 1.6f;
+            }
+        }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Ladder"  && gameObject.transform.GetChild(0).gameObject.activeSelf) {

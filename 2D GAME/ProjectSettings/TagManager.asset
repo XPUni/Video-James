@@ -4,25 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - DogNose
-  - Ladder
-  - Door1
-  - DogNoseRemove
-  - Ground
-  - PlayerMouth
-  - PlayerEars
-  - PlayerEyes
-  - PlayerNose
   - PlayerHand
-  - EndOfLevel
   - Key1
-  - PlayerDogNose
-  - Key3
-  - Door2
-  - Key2
-  - Eye
-  - Door3
-  - Stinky
+  - Door1
+  - Ladder
+  - Ground
+  - SecondEar
+  - earPod
+  - LevelExit
+  - PlayerEyes
+  - PlayerEars
+  - PlayerMouth
+  - PlayerNose
+  - enterDarkness
   layers:
   - Default
   - TransparentFX
