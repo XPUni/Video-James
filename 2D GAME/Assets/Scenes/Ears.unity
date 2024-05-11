@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 457383361}
   - component: {fileID: 457383363}
   - component: {fileID: 457383364}
+  - component: {fileID: 457383365}
   m_Layer: 0
   m_Name: earPod
   m_TagString: earPod
@@ -450,6 +451,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd41d8de8b3fb604398e66ecc7d92509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &457383365
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457383360}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5066275694253cf42be4d1a917e51291, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5066275694253cf42be4d1a917e51291, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 5
+  MaxDistance: 60
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.083333336
+      value: 1
+      inSlope: -Infinity
+      outSlope: -Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.20376842
+      value: 0.99746704
+      inSlope: -2.5997748
+      outSlope: -2.5997748
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.6058441
+    - serializedVersion: 3
+      time: 0.33333334
+      value: 0.25
+      inSlope: -1.4969943
+      outSlope: -1.4969943
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9191669
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6154277
+      value: 0.06925964
+      inSlope: -0.33181953
+      outSlope: -0.33181953
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5444036
+      outWeight: 0.46930605
+    - serializedVersion: 3
+      time: 1
+      value: 0.012822472
+      inSlope: -0.07453426
+      outSlope: -0.07453426
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4422449
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.32222223
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.459
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &487575760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +5034,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -32, y: -57, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 14
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -31, y: -57, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: -57, z: 0}
     second:
       serializedVersion: 2
@@ -5650,16 +5795,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -32, y: -52, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -31, y: -52, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -17643,7 +17778,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 513548e3c19ab5741a4d50d393e63f68, type: 2}
-  - m_RefCount: 32
+  - m_RefCount: 33
     m_Data: {fileID: 11400000, guid: 0d4844cb34a89194e8be81d3368b485a, type: 2}
   - m_RefCount: 34
     m_Data: {fileID: 11400000, guid: 69c75da3d653fe64eadfa178331862e6, type: 2}
@@ -17653,7 +17788,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d5d52795a51391c4eb3743008762fcd1, type: 2}
   - m_RefCount: 97
     m_Data: {fileID: 11400000, guid: 1d763a23fa021f24688c04bd959f626b, type: 2}
-  - m_RefCount: 181
+  - m_RefCount: 180
     m_Data: {fileID: 11400000, guid: 2272a59217069484291f5020fb524319, type: 2}
   - m_RefCount: 165
     m_Data: {fileID: 11400000, guid: 4125b3783dca93d4ab7e77ee0621c255, type: 2}
@@ -17669,14 +17804,14 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 295790f474b1ff74c8b91722ec153793, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 22df42fb6338f8c4482e6fee5c005f4b, type: 2}
-  - m_RefCount: 29
+  - m_RefCount: 30
     m_Data: {fileID: 11400000, guid: 69f3f8e78b8b3f84fbab1589e17d1cbc, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 29
+  - m_RefCount: 30
     m_Data: {fileID: 287248017, guid: a005623f061d20143958c181718c9161, type: 3}
   - m_RefCount: 22
     m_Data: {fileID: 1270187389, guid: a005623f061d20143958c181718c9161, type: 3}
-  - m_RefCount: 32
+  - m_RefCount: 33
     m_Data: {fileID: -981464601, guid: a005623f061d20143958c181718c9161, type: 3}
   - m_RefCount: 34
     m_Data: {fileID: -407187359, guid: a005623f061d20143958c181718c9161, type: 3}
@@ -17688,7 +17823,7 @@ Tilemap:
     m_Data: {fileID: 1520925144, guid: a005623f061d20143958c181718c9161, type: 3}
   - m_RefCount: 165
     m_Data: {fileID: 216132045, guid: a005623f061d20143958c181718c9161, type: 3}
-  - m_RefCount: 181
+  - m_RefCount: 180
     m_Data: {fileID: -1506000434, guid: a005623f061d20143958c181718c9161, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 1851848989, guid: a005623f061d20143958c181718c9161, type: 3}
@@ -17703,7 +17838,7 @@ Tilemap:
   - m_RefCount: 23
     m_Data: {fileID: 2061313131, guid: a005623f061d20143958c181718c9161, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1423
+  - m_RefCount: 1424
     m_Data:
       e00: 1
       e01: 0
@@ -17722,7 +17857,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1423
+  - m_RefCount: 1424
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 4.534e-41, g: 4.534e-41, b: 4.534e-41, a: 4.534e-41}
@@ -19301,13 +19436,24 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7325755975974169666, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1812359724}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1814030605191240774, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5078134044609060463}
   m_SourcePrefab: {fileID: 100100000, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
 --- !u!4 &5078134044609060455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7325755975974169666, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
   m_PrefabInstance: {fileID: 5078134044609060454}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &5078134044609060463
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404285419}
+  m_Enabled: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
