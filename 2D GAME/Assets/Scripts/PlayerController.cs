@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     public bool hasArm = false;
     private bool tiny;
     public float tinyTimer = 6f;
+
+    public float tinyTime = 0f;
+    public GameObject cake;
     public Dictionary<GameObject, float> cakes;
 
     // Start is called before the first frame update
@@ -123,7 +126,6 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
         }
-
         if(collision.gameObject.tag == "SecondEar"){
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
@@ -205,6 +207,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Ladder"  && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             onLadder = false;
@@ -214,14 +217,22 @@ public class PlayerController : MonoBehaviour
     void DecideGravity() {
         if (onLadder) {
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, 10*Input.GetAxis("Vertical"));
-        } else if (rb.velocity.y < -15f) {
+            rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
+        }
+        else if (rb.velocity.y < -15f)
+        {
             rb.velocity = new Vector2(rb.velocity.x, -15);
-        } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
+        }
+        else if (rb.velocity.y >= -20f && rb.velocity.y < -1f)
+        {
             rb.gravityScale = 4f;
-        } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
+        }
+        else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f)
+        {
             rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
-        } else if (rb.velocity.y >= 0.5f) {
+        }
+        else if (rb.velocity.y >= 0.5f)
+        {
             rb.gravityScale = 1.6f;
         }
     }
@@ -230,13 +241,14 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded) { horizontal_top_speed = 6f; }
         else { horizontal_top_speed = 5f; }
-        
+
         horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
-        if(horizontal_target_speed!=0){
-            animator.SetBool("isMove",true);
+        if (horizontal_target_speed != 0)
+        {
+            animator.SetBool("isMove", true);
         }
-        else{animator.SetBool("isMove", false);}
-        rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f*Time.deltaTime), rb.velocity.y);
+        else { animator.SetBool("isMove", false); }
+        rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f * Time.deltaTime), rb.velocity.y);
         //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
         //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
         if (tiny)
@@ -263,15 +275,65 @@ public class PlayerController : MonoBehaviour
     {
         Dictionary<GameObject, float>.KeyCollection cakesColl = cakes.Keys;
         List<GameObject> cakesList = new List<GameObject>();
-        foreach (GameObject cake in cakesColl) {
+        foreach (GameObject cake in cakesColl)
+        {
             cakesList.Add(cake);
         }
-        foreach (GameObject cake in cakesList) {
+        foreach (GameObject cake in cakesList)
+        {
             if (cakes[cake] > 0f) { cakes[cake] -= Time.deltaTime; }
-            else {
+            else
+            {
                 cakes.Remove(cake);
                 cake.SetActive(true);
             }
+        }
+
+        void Walk()
+        {
+            if (grounded) { horizontal_top_speed = 8f; }
+            else { horizontal_top_speed = 5f; }
+
+            horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
+            if (horizontal_target_speed != 0)
+            {
+                animator.SetBool("isMove", true);
+            }
+            else { animator.SetBool("isMove", false); }
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f * Time.deltaTime), rb.velocity.y);
+            //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
+            //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
+            if (tiny)
+            {
+                if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); }
+                else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); }
+            }
+            else
+            {
+                if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1, 1, 1); }
+                else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1, 1, 1); }
+            }
+        }
+        void Jump()
+        {
+            animator.SetBool("isJump", true);
+            bufferTracker = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, 10f);
+            grounded = false;
+        }
+
+        void Tiny()
+        {
+            tiny = true;
+            tinyTime += Time.deltaTime;
+
+            if (tinyTime > tinyTimer)
+            {
+                tiny = false;
+                cake.SetActive(true);
+                tinyTime = 0f;
+            }
+
         }
     }
 }
