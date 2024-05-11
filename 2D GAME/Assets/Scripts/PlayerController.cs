@@ -201,36 +201,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-        void Walk()
-        {
-            if (grounded) { horizontal_top_speed = 8f; }
-            else { horizontal_top_speed = 5f; }
-
-            horizontal_target_speed = horizontal_top_speed * Input.GetAxisRaw("Horizontal");
-            if (horizontal_target_speed != 0) {
-                animator.SetBool("isMove", true);
-            }
-            else { animator.SetBool("isMove", false); }
-            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f * Time.deltaTime), rb.velocity.y);
-            //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
-            //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
-            if (tiny)
-            {
-                if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); }
-                else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); }
-            }
-            else
-            {
-                if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1, 1, 1); }
-                else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1, 1, 1); }
-            }
-        }
-        void Jump()
-        {
-            animator.SetBool("isJump", true);
-            bufferTracker = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, 10f);
-            grounded = false;
-        }
 }
