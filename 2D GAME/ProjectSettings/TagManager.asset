@@ -23,6 +23,11 @@ TagManager:
   - Eye
   - Door3
   - Stinky
+  - Flower
+  - SecondEar
+  - earPod
+  - LevelExit
+  - Nose
   layers:
   - Default
   - TransparentFX

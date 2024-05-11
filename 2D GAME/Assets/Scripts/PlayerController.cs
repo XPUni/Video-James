@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public bool grounded = true;
     public bool hasEarPod = false;
     private Rigidbody2D rb;
+    public bool hasFlower = false;
 
     private float horizontal_top_speed;
     private float horizontal_target_speed;
@@ -144,6 +145,11 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
         }
+        if (collision.gameObject.tag == "Nose"&& hasFlower)
+        {
+            Destroy(collision.gameObject);
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        }
         if (collision.gameObject.tag == "SecondEar")
         {
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
@@ -196,8 +202,11 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(6).gameObject.SetActive(false);
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-
-
+        if(collision.gameObject.tag == "Flower")
+        {
+            hasFlower = true;
+            collision.gameObject.SetActive(false);
+        }
         if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf)
         {
             float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y / 2 + collision.gameObject.transform.position.y;
