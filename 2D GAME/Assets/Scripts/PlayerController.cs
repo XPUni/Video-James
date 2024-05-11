@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
     public bool hasEarPod = false;
     private Rigidbody2D rb;
+    private GameObject light;
 
     private float horizontal_top_speed;
     private float horizontal_target_speed;
@@ -31,6 +33,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(gameObject.transform.GetChild(6).gameObject.name == "playerLight"){
+            light = gameObject.transform.GetChild(6).gameObject;
+            light.SetActive(false);
+        }
         rb = GetComponent<Rigidbody2D>();
         Scene scene = SceneManager.GetActiveScene();
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
@@ -111,6 +117,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "SecondEar") {
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
+        
         if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
             keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
@@ -141,11 +148,19 @@ public class PlayerController : MonoBehaviour
                 keys.Add(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
                 Destroy(collision.gameObject);
             }
+            if(collision.gameObject.tag=="enterDarkness"){
+                Debug.Log("I entered darkness");
+                light.SetActive(true);
+            }
         }
         private void OnTriggerExit2D(Collider2D collision) {
             if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
                 onLadder = false;
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
+            }
+            if(collision.gameObject.tag=="enterDarkness"){
+                Debug.Log("I exited darkness");
+                light.SetActive(false);
             }
         }
         void DecideGravity() {

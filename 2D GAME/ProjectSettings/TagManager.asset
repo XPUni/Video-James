@@ -16,6 +16,7 @@ TagManager:
   - PlayerEars
   - PlayerMouth
   - PlayerNose
+  - enterDarkness
   layers:
   - Default
   - TransparentFX
