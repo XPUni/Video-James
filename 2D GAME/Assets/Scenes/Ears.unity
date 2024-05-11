@@ -722,9 +722,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2119936972869343559, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119936972869343559, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2329748684883556248, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
       propertyPath: m_Name
       value: openDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329748684883556248, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
+      propertyPath: m_TagString
+      value: LevelExit
       objectReference: {fileID: 0}
     - target: {fileID: 7890389695448773918, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
       propertyPath: m_LocalPosition.x
@@ -764,6 +776,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7890389695448773918, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152185640196564502, guid: 51d71eea6e7b5d1478222da6e7690467, type: 3}
+      propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -18621,9 +18637,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1300644936}
   - component: {fileID: 1300644935}
+  - component: {fileID: 1300644937}
   m_Layer: 0
-  m_Name: levelExitEars_1
-  m_TagString: Untagged
+  m_Name: ExitOpen
+  m_TagString: LevelExit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18697,6 +18714,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1300644937
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300644934}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 4}
+    newSize: {x: 1, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1418569571
 GameObject:
   m_ObjectHideFlags: 0
@@ -19129,6 +19192,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1877717582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7990781969328215340, guid: d8a11d2aaf85dbb4b8afe20ed5b0ba4d, type: 3}
+  m_PrefabInstance: {fileID: 595921944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1977245188
 GameObject:
   m_ObjectHideFlags: 0
@@ -19249,7 +19317,7 @@ GameObject:
   - component: {fileID: 2035658380}
   - component: {fileID: 2035658379}
   m_Layer: 0
-  m_Name: levelExitEars_0
+  m_Name: ExitClose
   m_TagString: LevelExit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19343,7 +19411,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1478848292, guid: 92c713e4ea336594186fa5bf6de262cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19390,6 +19458,18 @@ PrefabInstance:
       propertyPath: light
       value: 
       objectReference: {fileID: 1812359723}
+    - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      propertyPath: levelExit
+      value: 
+      objectReference: {fileID: 1877717582}
+    - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      propertyPath: levelExitOpen
+      value: 
+      objectReference: {fileID: 1300644934}
+    - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      propertyPath: levelExitClose
+      value: 
+      objectReference: {fileID: 2035658378}
     - target: {fileID: 7325755975974169666, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.85

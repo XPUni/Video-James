@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    public GameObject levelExitClose;
+    public GameObject levelExitOpen;
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
@@ -33,11 +34,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        //levelExitOpen.SetActive(false);
         if(gameObject.transform.GetChild(6).gameObject.name == "playerLight"){
             light = gameObject.transform.GetChild(6).gameObject;
             light.SetActive(false);
         }
-        rb = GetComponent<Rigidbody2D>();
+        
         Scene scene = SceneManager.GetActiveScene();
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         gameObject.transform.GetChild(1).gameObject.SetActive(false);
@@ -108,6 +111,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "LevelExit" && !levelExitClose.activeSelf){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            Debug.Log("Should be going to next scene");
+        }
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
@@ -122,9 +129,9 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "LevelExit") {
-            if (gameObject.transform.GetChild(2).gameObject.activeSelf) {
-                Destroy(collision.gameObject);
-            }
+            //if (gameObject.transform.GetChild(2).gameObject.activeSelf) {
+                //Destroy(collision.gameObject);
+            //}
             if (collision.gameObject.name == "Cake")
             {
                 cake = collision.gameObject;
@@ -134,7 +141,6 @@ public class PlayerController : MonoBehaviour
         }
     }
         private void OnTriggerEnter2D(Collider2D collision) {
-            //Debug.Log(collision.gameObject.name);
             if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
                 float ladderTop = collision.gameObject.GetComponent<BoxCollider2D>().size.y / 2 + collision.gameObject.transform.position.y;
                 if (grounded || transform.position.y > ladderTop) {
@@ -148,7 +154,8 @@ public class PlayerController : MonoBehaviour
             }
             if (collision.gameObject.tag == "SecondEar" && hasEarPod) {
                 gameObject.transform.GetChild(2).gameObject.SetActive(true);
-                Debug.Log("Ears should be on");
+                levelExitClose.SetActive(false);
+                
             }
             if(collision.gameObject.tag=="enterDarkness"){
                 Debug.Log("I entered darkness");
