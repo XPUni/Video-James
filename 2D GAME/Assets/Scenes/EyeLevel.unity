@@ -292,7 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 1232202470}
   new_text: '"Wait, the keys and locks were coloured the whole time? I guess keys
-    only open the same colour of locks."'
+    only open the same colour of locks. That was out of sight, so it was out of my
+    mind too!"'
   existenceCheck: {fileID: 1350306947}
   exists: 0
 --- !u!224 &83901599
@@ -28072,7 +28073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325755975974169666, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7325755975974169666, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       propertyPath: m_LocalPosition.z

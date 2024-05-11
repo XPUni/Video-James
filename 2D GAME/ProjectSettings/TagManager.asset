@@ -14,6 +14,14 @@ TagManager:
   - Eye
   - Key3
   - Door3
+  - PlayerMouth
+  - PlayerEars
+  - PlayerEyes
+  - PlayerNose
+  - SecondEar
+  - earPod
+  - LevelExit
+  - EndOfLevel
   layers:
   - Default
   - TransparentFX
