@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1024
     height: 768
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 16.506037, y: -4.37914, z: 0.6436113}
+    m_Target: {x: 12.18367, y: -5.4060407, z: 0.6217117}
     speed: 2
     m_Value: {x: 16.506037, y: -4.37914, z: 0.6436113}
   m_RenderMode: 0
@@ -1007,7 +1007,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.3415027
+    m_Target: 4.5314693
     speed: 2
     m_Value: 2.3415027
   m_Ortho:
@@ -1344,7 +1344,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 60a50000
     m_LastClickedID: 42336
-    m_ExpandedIDs: 00000000f07f000000ca9a3b
+    m_ExpandedIDs: 000000006c81000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1373,7 +1373,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f07f000000ca9a3b
+    m_ExpandedIDs: 000000006c81000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

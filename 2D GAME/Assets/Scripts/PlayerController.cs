@@ -272,41 +272,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-    private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Ladder"  && gameObject.transform.GetChild(0).gameObject.activeSelf) {
-            onLadder = false;
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
-        }
-    }
-
-    void DecideGravity()
-    {
-        if (onLadder)
-        {
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
-        }
-        else if (rb.velocity.y < -15f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -15);
-        }
-        else if (rb.velocity.y >= -20f && rb.velocity.y < -1f)
-        {
-            rb.gravityScale = 4f;
-        }
-        else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f)
-        {
-            rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
-        }
-        else if (rb.velocity.y >= 0.5f)
-        {
-            rb.gravityScale = 1.6f;
-        }
-    }
-
-
-    
-
     void Walk()
     {
         if (grounded) { horizontal_top_speed = 8f; }
