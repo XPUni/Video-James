@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
                 cake.SetActive(true);
             }
         }
+    }
 
         void Walk()
         {
@@ -231,19 +232,5 @@ public class PlayerController : MonoBehaviour
             bufferTracker = 0f;
             rb.velocity = new Vector2(rb.velocity.x, 10f);
             grounded = false;
-        }
-
-        void Tiny()
-        {
-            tiny = true;
-            tinyTime += Time.deltaTime;
-
-            if (tinyTime > tinyTimer)
-            {
-                tiny = false;
-                cake.SetActive(true);
-                tinyTime = 0f;
-            }
-
         }
 }
