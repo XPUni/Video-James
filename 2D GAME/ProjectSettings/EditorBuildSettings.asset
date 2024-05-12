@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/EyeLevel.unity
     guid: 668913948c1608d4596806b8c4ae1860
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/EarsCutscene.unity
+    guid: ba327ee75456b894b937d8af99cfd6c6
+  - enabled: 1
     path: Assets/Scenes/Ears.unity
     guid: 46121b2aeacbf5649811b88c3c27be92
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/MouthCutscene.unity
+    guid: 10dd33789f1794657b64d393867a86e1
   - enabled: 1
     path: Assets/Scenes/mouth.unity
     guid: 5198c5d55966647d0988fd0b82e7b8e4

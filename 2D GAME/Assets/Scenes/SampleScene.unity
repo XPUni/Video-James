@@ -431,7 +431,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &279133061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -578,7 +581,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &380708348
 RectTransform:
   m_ObjectHideFlags: 0
@@ -859,7 +865,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f616186652769e4099d814419d096ab, type: 3}
@@ -1085,7 +1091,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &546921374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1622,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &651815405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20315,7 +20327,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1039920634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21000,7 +21015,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: Hands
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1517867978
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21290,7 +21308,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1814327947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21403,7 +21424,10 @@ MonoBehaviour:
   name: {fileID: 618357057}
   speakerName: You
   handicon: {fileID: 230441598}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 573695979}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1977245192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21658,6 +21682,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5769942793079735741, guid: d8a11d2aaf85dbb4b8afe20ed5b0ba4d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7990781969328215340, guid: d8a11d2aaf85dbb4b8afe20ed5b0ba4d, type: 3}
       propertyPath: m_Name
       value: Door1

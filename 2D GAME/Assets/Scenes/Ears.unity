@@ -265,6 +265,183 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!1 &100636479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 100636480}
+  - component: {fileID: 100636482}
+  - component: {fileID: 100636481}
+  m_Layer: 0
+  m_Name: lefEarIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &100636480
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100636479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0274389, y: 1.0274389, z: 1.0274389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1605955643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00066513, y: -18.1}
+  m_SizeDelta: {x: 181.88, y: 146.4275}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &100636481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100636479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 88d32411849d9d441bb737c919558d77, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &100636482
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100636479}
+  m_CullTransparentMesh: 1
+--- !u!1 &125418325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125418329}
+  - component: {fileID: 125418328}
+  - component: {fileID: 125418327}
+  - component: {fileID: 125418326}
+  m_Layer: 5
+  m_Name: Canvas (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &125418326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125418325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &125418327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125418325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 2
+  m_MatchWidthOrHeight: 0.506
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &125418328
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125418325}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
+--- !u!224 &125418329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125418325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1306495762}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &285629551
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,10 +527,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: w
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"I CAN HEAR IT!! iT''S BEHIND THIS WALL!!!"'
   existenceCheck: {fileID: 457383360}
-  exists: 1
+  exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &285629555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -362,15 +546,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285629551}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.01, y: -40.47}
+  m_AnchoredPosition: {x: -806.02856, y: -244.08046}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &292615031
@@ -458,11 +642,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "NO!!! I was so CLOSE!! I swear as soon as I found out who
-    CREATED this mess..."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"NO!!! I was so CLOSE!! I swear as soon as I found out who CREATED this
+    mess..."'
   existenceCheck: {fileID: 457383360}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &292615035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -471,15 +662,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292615031}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.8, y: -46.7}
+  m_AnchoredPosition: {x: -867.6183, y: -263.06625}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319620213
@@ -521,6 +712,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1814030605191240774, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
   m_PrefabInstance: {fileID: 5078134044609060454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &433288853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8473201943285628949, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &457383360
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,10 +1079,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Right Ear: "Huh, so you DID find it, not that I was doubting."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Huh, so you DID find it, not that I was doubting."'
   existenceCheck: {fileID: 457383360}
   exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 1132196437}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &474356507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -889,15 +1098,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474356503}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.92, y: -9.62}
+  m_AnchoredPosition: {x: -952.0944, y: -150.06561}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &475352259
@@ -985,11 +1194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "OH SWEET EARPODS! I could KISS you right now. If you and
-    I only had lips."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"OH SWEET EARPODS! I could KISS you right now. If you and I only had
+    lips."'
   existenceCheck: {fileID: 457383360}
   exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &475352263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -998,154 +1214,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475352259}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.11, y: -42.54}
+  m_AnchoredPosition: {x: -824.0088, y: -250.38876}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &487575760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 487575761}
-  - component: {fileID: 487575763}
-  - component: {fileID: 487575764}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &487575761
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487575760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1575467512}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 35}
-  m_SizeDelta: {x: 750, y: 70}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &487575763
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487575760}
-  m_CullTransparentMesh: 1
---- !u!114 &487575764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487575760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: '"There are my ears! Finally! The deafening silence is really getting on
-    my nerves."'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &499243346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1305,11 +1384,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Right Ear: "Aye I''m happy where I am thanks! If you make Lefty happy
-    then I *MIGHT* come along."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Aye I''m happy where I am thanks! If you make Lefty happy then I *MIGHT*
+    come along."'
   existenceCheck: {fileID: 21895305}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 1132196437}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &514764440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1318,15 +1404,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514764436}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.92, y: -9.62}
+  m_AnchoredPosition: {x: -952.0944, y: -150.06561}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -1498,7 +1584,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -18959,10 +19045,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "Yes!! We''re in!! We''re so close!! I love you so much-"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Yes!! We''re in!! We''re so close!! I love you so much-"'
   existenceCheck: {fileID: 457383360}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &785522919
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18971,15 +19064,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785522915}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.74, y: -36.56}
+  m_AnchoredPosition: {x: -911.9286, y: -232.16478}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &816921789
@@ -19067,11 +19160,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "Can ya hear it!? It''s getting louder past this door!! If
-    only we have a key..."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Can ya hear it!? It''s getting louder past this door!! If only we have
+    a key..."'
   existenceCheck: {fileID: 1418569571}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &816921793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19080,15 +19180,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816921789}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.92, y: -35.96}
+  m_AnchoredPosition: {x: -921.6196, y: -230.3363}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &878393848
@@ -19176,11 +19276,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "WHO EVEN MADE THIS TUNNEL!? Urgh, it looks like we have to
-    jump across somehow..."'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"WHO EVEN MADE THIS TUNNEL!? Urgh, it looks like we have to jump across
+    somehow..."'
   existenceCheck: {fileID: 588503308}
   exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &878393852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19189,15 +19296,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878393848}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.93, y: -56}
+  m_AnchoredPosition: {x: -924.6975, y: -291.40787}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &882511650
@@ -19486,7 +19593,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.004777, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1101823258
+--- !u!1 &969320707
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19494,56 +19601,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1101823259}
-  - component: {fileID: 1101823261}
-  - component: {fileID: 1101823260}
-  m_Layer: 5
-  m_Name: Image
+  - component: {fileID: 969320708}
+  - component: {fileID: 969320710}
+  - component: {fileID: 969320709}
+  m_Layer: 0
+  m_Name: handicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1101823259
+  m_IsActive: 0
+--- !u!224 &969320708
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101823258}
+  m_GameObject: {fileID: 969320707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0274389, y: 1.0274389, z: 1.0274389}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1575467512}
+  m_Father: {fileID: 1605955643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 70}
-  m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1101823260
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00066513, y: -18.1}
+  m_SizeDelta: {x: 181.88, y: 146.4275}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &969320709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101823258}
+  m_GameObject: {fileID: 969320707}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25734195, g: 0.1609042, b: 0.3509434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: abeac1663d33fc8498ee43590071619a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19553,13 +19660,88 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1101823261
+--- !u!222 &969320710
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101823258}
+  m_GameObject: {fileID: 969320707}
+  m_CullTransparentMesh: 1
+--- !u!1 &1132196437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132196438}
+  - component: {fileID: 1132196440}
+  - component: {fileID: 1132196439}
+  m_Layer: 0
+  m_Name: rigEarIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1132196438
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132196437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0274389, y: 1.0274389, z: 1.0274389}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1605955643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00066513, y: -18.1}
+  m_SizeDelta: {x: 181.88, y: 146.4275}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1132196439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132196437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2c2dbc81bde129449b4cc9202ef8863f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1132196440
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132196437}
   m_CullTransparentMesh: 1
 --- !u!1 &1258675785
 GameObject:
@@ -19646,10 +19828,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "OH A KEY!! I CAN FEEL ITS RADIATING IMPORTANCE!"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"OH A KEY!! I CAN FEEL ITS RADIATING IMPORTANCE!"'
   existenceCheck: {fileID: 1418569571}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &1258675789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19658,15 +19847,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258675785}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.6, y: -10.8}
+  m_AnchoredPosition: {x: -785.9456, y: -153.66165}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1259333079
@@ -19834,6 +20023,224 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
+--- !u!1 &1306495761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7428076883523281556, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1306495762 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1306495763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306495761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 1442744502}
+  new_text: 
+  existenceCheck: {fileID: 404285419}
+  exists: 1
+  name: {fileID: 433288853}
+  speakerName: You
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 404285419}
+  dialogueBox: {fileID: 1306495761}
+--- !u!1001 &1317803323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 125418329}
+    m_Modifications:
+    - target: {fileID: 3173347649311070538, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 975.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173347649311070538, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 145.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173347649311070538, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 119.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173347649311070538, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644035956114825975, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_text
+      value: '"There are my ears! Finally! The deafening silence is really getting
+        on my nerves."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_fontSize
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1214.3142
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 217.4367
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428076883523281556, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_Name
+      value: DialogueTextbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473201943285628949, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_text
+      value: YOU
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1977245192}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1795974660}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514764440}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474356507}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1678760500}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 816921793}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 878393852}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 292615035}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 785522919}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 475352263}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968159582}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258675789}
+    - targetCorrespondingSourceObject: {fileID: 7240976918418253334, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 285629555}
+    - targetCorrespondingSourceObject: {fileID: 3453133193698986661, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969320708}
+    - targetCorrespondingSourceObject: {fileID: 3453133193698986661, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 100636480}
+    - targetCorrespondingSourceObject: {fileID: 3453133193698986661, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1132196438}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7428076883523281556, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1306495763}
+  m_SourcePrefab: {fileID: 100100000, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
 --- !u!1 &1418569571
 GameObject:
   m_ObjectHideFlags: 0
@@ -19980,6 +20387,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1442744502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458940367
 GameObject:
   m_ObjectHideFlags: 3
@@ -20011,109 +20429,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1259333081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1575467508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1575467512}
-  - component: {fileID: 1575467511}
-  - component: {fileID: 1575467510}
-  - component: {fileID: 1575467509}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1575467509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575467508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1575467510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575467508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 2
-  m_MatchWidthOrHeight: 0.506
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1575467511
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575467508}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 3
-  m_TargetDisplay: 0
---- !u!224 &1575467512
+--- !u!224 &1605955643 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3453133193698986661, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575467508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1101823259}
-  - {fileID: 487575761}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1678760496
 GameObject:
   m_ObjectHideFlags: 0
@@ -20199,11 +20519,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "Ah jeez it''s so dark in here- WHAT KIND OF MONSTER WOULD
-    DO SUCH A THING!?"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Ah jeez it''s so dark in here- WHAT KIND OF MONSTER WOULD DO SUCH A
+    THING!?"'
   existenceCheck: {fileID: 588503308}
   exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &1678760500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20212,17 +20539,22 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678760496}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.4, y: -21.6}
+  m_AnchoredPosition: {x: -877.9796, y: -186.5745}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1682244753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4644035956114825975, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1317803323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683987738
 GameObject:
   m_ObjectHideFlags: 0
@@ -20376,10 +20708,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "Oh my gosh! I can hear it!! Sweet sweet groove!"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Oh my gosh! I can hear it!! Sweet sweet groove!"'
   existenceCheck: {fileID: 588503308}
   exists: 0
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &1795974660
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20388,15 +20727,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795974656}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.07, y: -9.57}
+  m_AnchoredPosition: {x: -919.02924, y: -149.9133}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1812359723
@@ -20573,10 +20912,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "What the, a ladder? Where does it go?"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"What the, a ladder? Where does it go?"'
   existenceCheck: {fileID: 1418569571}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &1968159582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20585,15 +20931,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968159578}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.4, y: -30.4}
+  m_AnchoredPosition: {x: -804.8401, y: -213.39232}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1977245188
@@ -20681,11 +21027,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e690fb4c13714ea07e0b936ea578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 487575764}
-  new_text: 'Left Ear: "Help me get back my ear pod! Here I''ll even make it easier
-    for you, just listen to the awesome music!"'
+  textMeshPro: {fileID: 1442744502}
+  new_text: '"Help me get back my ear pod! Here I''ll even make it easier for you,
+    just listen to the awesome music!"'
   existenceCheck: {fileID: 588503308}
   exists: 1
+  name: {fileID: 433288853}
+  speakerName: Ears
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 100636479}
+  icon: {fileID: 1682244753}
+  dialogueBox: {fileID: 1306495761}
 --- !u!224 &1977245192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20694,15 +21047,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977245188}
   m_LocalRotation: {x: -0, y: -0, z: -0.7055036, w: 0.7087064}
-  m_LocalPosition: {x: 0, y: 0, z: 0.028841162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087892935}
+  m_LocalScale: {x: 3.047482, y: 3.047482, z: 3.047482}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1306495762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.74}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.2562, y: -9.687299}
+  m_AnchoredPosition: {x: -995.7837, y: -150.27074}
   m_SizeDelta: {x: 4.9236, y: 3.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2035658378
@@ -20960,20 +21313,7 @@ SceneRoots:
   - {fileID: 5078134044609060454}
   - {fileID: 1418569573}
   - {fileID: 1683987741}
-  - {fileID: 1575467512}
-  - {fileID: 1977245192}
-  - {fileID: 1795974660}
-  - {fileID: 514764440}
-  - {fileID: 474356507}
-  - {fileID: 1678760500}
-  - {fileID: 816921793}
-  - {fileID: 878393852}
-  - {fileID: 292615035}
-  - {fileID: 785522919}
-  - {fileID: 475352263}
-  - {fileID: 1968159582}
-  - {fileID: 1258675789}
-  - {fileID: 285629555}
+  - {fileID: 125418329}
   - {fileID: 723848195}
   - {fileID: 882511650}
   - {fileID: 457383362}
