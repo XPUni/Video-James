@@ -32,6 +32,7 @@ public class ContactDeleter : MonoBehaviour
         {
             if(gameObject.tag == "earPod"){
                 collision.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().hasEarPod = true;
+                collision.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().mainMusic.mute = false;
                 //Debug.Log(hasEarPod);
             }
             if(gameObject.tag == "SecondEar" && collision.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().hasEarPod == false){  

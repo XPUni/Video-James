@@ -30,6 +30,7 @@ TagManager:
   - Nose
   - enterDarkness
   - firstEar
+  - Mouth
   layers:
   - Default
   - TransparentFX
