@@ -38,10 +38,12 @@ public class PlayerController : MonoBehaviour
     public float tinyTime = 0f;
     public GameObject cake;
     private Dictionary<GameObject, float> cakes = new Dictionary<GameObject, float>();
+    private bool hasNose;
 
     // Start is called before the first frame update
     void Start()
     {
+        hasNose = false;
         if(earPodMusic){
             earPodMusic.mute = true;
         }
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y - 0.6f), 0.45f); // Adjust radius as needed
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door")))
+            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door"))
             {
                 return true;
             }
@@ -165,6 +167,9 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "LevelExit" && !levelExitClose.activeSelf){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
+        if(collision.gameObject.tag == "Mirror" && hasNose){
+            SceneManager.LoadScene(0);
+        }
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
@@ -176,6 +181,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             gameObject.transform.GetChild(4).gameObject.SetActive(true);
+            hasNose = true;
         }
         if(collision.gameObject.tag == "Mouth"){
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
