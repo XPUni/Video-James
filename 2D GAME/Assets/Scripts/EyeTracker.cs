@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class EyeTracker : MonoBehaviour
 {
-    PostProcessVolume m_Volume;
-    ColorGrading m_Grayscale;
+    UnityEngine.Rendering.Universal.ColorAdjustments vignette;
     private int eyes;
     private bool triggerThisFrame = false;
     void Start()
         {
             eyes = 0;
-            // Create an instance of a vignette
-            m_Grayscale = ScriptableObject.CreateInstance<ColorGrading>();
-            m_Grayscale.enabled.Override(true);
-            m_Grayscale.saturation.Override(-100f);
-            // Use the QuickVolume method to create a volume with a priority of 100, and assign the vignette to this volume
-            m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Grayscale);
+            UnityEngine.Rendering.VolumeProfile volumeProfile = GetComponent<UnityEngine.Rendering.Volume>()?.profile;
+            if(!volumeProfile) throw new System.NullReferenceException(nameof(UnityEngine.Rendering.VolumeProfile));
+            
+            // You can leave this variable out of your function, so you can reuse it throughout your class.
+            
+            if(!volumeProfile.TryGet(out vignette)) throw new System.NullReferenceException(nameof(vignette));
+            
+            vignette.saturation.Override(-100f);
         }
 
     void Update() {
@@ -32,7 +33,7 @@ public class EyeTracker : MonoBehaviour
             eyes += 1;
             Destroy(collision.gameObject);
             if (eyes==1) {
-                m_Grayscale.enabled.Override(false);
+                vignette.saturation.Override(0f);
             }
             if (eyes==2) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

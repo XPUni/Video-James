@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioSource mainMusic;
     public AudioSource earPodMusic;
     public GameObject levelExitClose;
     public GameObject levelExitOpen;
@@ -41,7 +42,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        earPodMusic.mute = true;
+        if(earPodMusic){
+            earPodMusic.mute = true;
+        }
+        
         rb = GetComponent<Rigidbody2D>();
         //levelExitOpen.SetActive(false);
         if(gameObject.transform.childCount>=8){
@@ -58,6 +62,11 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
         gameObject.transform.GetChild(6).gameObject.SetActive(false);
+
+        if(scene.buildIndex==4){
+            mainMusic.mute = true;
+
+        }
         Debug.Log(scene.buildIndex);
         if (scene.buildIndex > 2)
         {
@@ -85,7 +94,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y - 0.6f), 0.45f); // Adjust radius as needed
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.tag == "Ground")
+            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door")))
             {
                 return true;
             }
@@ -170,9 +179,9 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             gameObject.transform.GetChild(4).gameObject.SetActive(true);
         }
-        if (collision.gameObject.tag == "SecondEar")
-        {
-            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        if(collision.gameObject.tag == "Mouth"){
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            levelExitClose.SetActive(false);
         }
         if (collision.gameObject.tag == "GetNose")
         {
