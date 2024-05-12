@@ -28,6 +28,8 @@ TagManager:
   - earPod
   - LevelExit
   - Nose
+  - enterDarkness
+  - firstEar
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioSource earPodMusic;
     public GameObject levelExitClose;
     public GameObject levelExitOpen;
     public Animator animator;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        earPodMusic.mute = true;
         rb = GetComponent<Rigidbody2D>();
         //levelExitOpen.SetActive(false);
         if(gameObject.transform.childCount>=8){
@@ -158,6 +160,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            levelExitClose.SetActive(false);
             //animator.SetTrigger("gottenArm");
         }
         if (collision.gameObject.tag == "Nose"&& hasFlower)
@@ -198,6 +201,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "firstEar"){
+            earPodMusic.mute = false;
+            Debug.Log(earPodMusic.mute);
+
+        }
         //Debug.Log(collision.gameObject.name);
         if (triggerThisFrame) { return; }
         triggerThisFrame = true;
@@ -241,7 +249,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if (collision.gameObject.tag == "SecondEar" && hasEarPod) {
+        if ((collision.gameObject.tag == "SecondEar" && hasEarPod)) {
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
             levelExitClose.SetActive(false);
                 
