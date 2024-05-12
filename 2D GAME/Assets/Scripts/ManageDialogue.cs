@@ -14,7 +14,11 @@ public class ManageDialogue : MonoBehaviour
     public string speakerName;
 
     public GameObject handicon;
+    public GameObject mouthicon;
+    public GameObject earicon;
     public GameObject icon;
+
+    public GameObject dialogueBox;
 
 
     void Start()
@@ -31,6 +35,10 @@ public class ManageDialogue : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             if ((existenceCheck != null) == exists) {
+                if (!dialogueBox.activeSelf)
+                {
+                    dialogueBox.SetActive(true);
+                }
                 textMeshPro.text = new_text;
                 name.text = speakerName;
                 Destroy(gameObject);
@@ -38,11 +46,29 @@ public class ManageDialogue : MonoBehaviour
                 {
                     icon.SetActive(true);
                     handicon.SetActive(false);
+                    mouthicon.SetActive(false);
+                    earicon.SetActive(false);
                 }
                 else if (speakerName == "Hands")
                 {
                     handicon.SetActive(true);
                     icon.SetActive(false);
+                    mouthicon.SetActive(false);
+                    earicon.SetActive(false);
+                }
+                else if (speakerName == "Mouth")
+                {
+                    mouthicon.SetActive(true);
+                    icon.SetActive(false);
+                    handicon.SetActive(false);
+                    earicon.SetActive(false);
+                }
+                else if (speakerName == "Ears")
+                {
+                    earicon.SetActive(true);
+                    icon.SetActive(false);
+                    handicon.SetActive(false);
+                    mouthicon.SetActive(false);
                 }
                 else
                 {

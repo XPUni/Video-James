@@ -27,6 +27,8 @@ public class MouthLvl : MonoBehaviour
     public TextMeshProUGUI timeText;
     public GameObject clock;
 
+    public GameObject bigCake;
+
     // Update is called once per frame
     void Update()
     {
@@ -39,6 +41,15 @@ public class MouthLvl : MonoBehaviour
         {
             ingredients.SetActive(false);
             returnText.SetActive(true);
+        }
+
+        if (complete)
+        {
+            bigCake.SetActive(true);
+        }
+        else
+        {
+            bigCake.SetActive(false);
         }
     }
 
