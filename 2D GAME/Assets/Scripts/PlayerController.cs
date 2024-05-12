@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y - 0.6f), 0.45f); // Adjust radius as needed
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door")))
+            if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door"))
             {
                 return true;
             }
