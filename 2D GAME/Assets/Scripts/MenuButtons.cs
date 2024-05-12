@@ -8,7 +8,7 @@ public class MenuButtons : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("HandCutscene");
     }
 
     public void QuitGame()
@@ -18,7 +18,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("HandCutscene");
     }
 
     public void Level2()
