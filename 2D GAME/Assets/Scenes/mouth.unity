@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 90
+  m_text: 80
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f330a2115b6e14ce38f18640689588b6, type: 2}
   m_sharedMaterial: {fileID: 5160272582537421967, guid: f330a2115b6e14ce38f18640689588b6, type: 2}
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   ingredients: {fileID: 1492916961}
   returnText: {fileID: 1482674055}
   complete: 0
-  lvlTimer: 90
+  lvlTimer: 80
   lvlTime: 0
   timeText: {fileID: 1009787434}
   clock: {fileID: 1725213286}
