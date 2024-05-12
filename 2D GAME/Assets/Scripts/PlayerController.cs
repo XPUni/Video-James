@@ -38,10 +38,12 @@ public class PlayerController : MonoBehaviour
     public float tinyTime = 0f;
     public GameObject cake;
     private Dictionary<GameObject, float> cakes = new Dictionary<GameObject, float>();
+    private bool hasNose;
 
     // Start is called before the first frame update
     void Start()
     {
+        hasNose = false;
         if(earPodMusic){
             earPodMusic.mute = true;
         }
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.SetActive(false);
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        gameObject.transform.GetChild(6).gameObject.SetActive(false);
 
         if(scene.buildIndex==4){
             mainMusic.mute = true;
@@ -82,6 +85,7 @@ public class PlayerController : MonoBehaviour
         if (scene.buildIndex > 5)
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            earPodMusic.mute = false;
         }
         //cakes = new Dictionary<GameObject, float>();
         Debug.Log(cakes);
@@ -165,6 +169,9 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "LevelExit" && !levelExitClose.activeSelf){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
+        if(collision.gameObject.tag == "Mirror" && hasNose){
+            SceneManager.LoadScene(0);
+        }
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
@@ -176,6 +183,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             gameObject.transform.GetChild(4).gameObject.SetActive(true);
+            hasNose = true;
         }
         if(collision.gameObject.tag == "Mouth"){
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
