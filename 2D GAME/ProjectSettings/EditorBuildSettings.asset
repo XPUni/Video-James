@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/EyeCutscene.unity
+    guid: 9ae56f7237c79c848a075ccb102a8abd
+  - enabled: 1
     path: Assets/Scenes/EyeLevel.unity
     guid: 668913948c1608d4596806b8c4ae1860
   - enabled: 1

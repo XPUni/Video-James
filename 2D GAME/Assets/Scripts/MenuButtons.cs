@@ -23,7 +23,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Level2()
     {
-        SceneManager.LoadScene("EyeLevel");
+        SceneManager.LoadScene("EyeCutscene");
     }
 
     public void Level3()

@@ -299,7 +299,10 @@ MonoBehaviour:
   name: {fileID: 1695453655}
   speakerName: You
   handicon: {fileID: 1902819819}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1695453652}
+  dialogueBox: {fileID: 0}
 --- !u!224 &83901599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,7 +415,10 @@ MonoBehaviour:
   name: {fileID: 1695453655}
   speakerName: You
   handicon: {fileID: 1902819819}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1695453652}
+  dialogueBox: {fileID: 0}
 --- !u!224 &141998829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2418,7 +2424,10 @@ MonoBehaviour:
   name: {fileID: 1695453655}
   speakerName: You
   handicon: {fileID: 1902819819}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1695453652}
+  dialogueBox: {fileID: 0}
 --- !u!224 &762746961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28172,6 +28181,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      propertyPath: mainMusic
+      value: 
+      objectReference: {fileID: 1324611169}
+    - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       propertyPath: key_tracker
       value: 
       objectReference: {fileID: 1279058588}
@@ -30078,7 +30091,10 @@ MonoBehaviour:
   name: {fileID: 1695453655}
   speakerName: You
   handicon: {fileID: 1902819819}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1695453652}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1673495415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31094,7 +31110,10 @@ MonoBehaviour:
   name: {fileID: 1695453655}
   speakerName: You
   handicon: {fileID: 1902819819}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1695453652}
+  dialogueBox: {fileID: 0}
 --- !u!224 &2010386328
 RectTransform:
   m_ObjectHideFlags: 0
