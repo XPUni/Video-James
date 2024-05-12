@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.SetActive(false);
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        gameObject.transform.GetChild(6).gameObject.SetActive(false);
 
         if(scene.buildIndex==4){
             mainMusic.mute = true;
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
         if (scene.buildIndex > 5)
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            earPodMusic.mute = false;
         }
         //cakes = new Dictionary<GameObject, float>();
         Debug.Log(cakes);
