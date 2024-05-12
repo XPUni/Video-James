@@ -145,10 +145,8 @@ GameObject:
   - component: {fileID: 5794376585250543580}
   - component: {fileID: 283000563778694081}
   - component: {fileID: 2784806534175456328}
-  - component: {fileID: 3555587588114508974}
   - component: {fileID: 4576782134641758238}
   - component: {fileID: 5446193171909179669}
-  - component: {fileID: 979172938963379413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -190,13 +188,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6e80ce614f8c2499ff5431e39844c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  earPodMusic: {fileID: 0}
+  levelExitClose: {fileID: 0}
+  levelExitOpen: {fileID: 0}
   animator: {fileID: 5446193171909179669}
   keys: 
   grounded: 0
   hasEarPod: 0
+  hasFlower: 0
   key_tracker: {fileID: 0}
   hasArm: 0
   tinyTimer: 6
+  tinyTime: 0
+  cake: {fileID: 0}
 --- !u!70 &283000563778694081
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -261,43 +265,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &3555587588114508974
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814030605191240774}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.025}
-  m_Size: {x: 1, y: 1.95}
-  m_Direction: 0
 --- !u!212 &4576782134641758238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -374,25 +341,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &979172938963379413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814030605191240774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6e80ce614f8c2499ff5431e39844c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 5446193171909179669}
-  keys: 
-  grounded: 0
-  hasEarPod: 0
-  key_tracker: {fileID: 0}
-  hasArm: 0
-  tinyTimer: 6
 --- !u!1 &3456904158199340651
 GameObject:
   m_ObjectHideFlags: 0

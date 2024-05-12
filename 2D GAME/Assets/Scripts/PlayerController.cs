@@ -57,22 +57,24 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.SetActive(false);
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        gameObject.transform.GetChild(6).gameObject.SetActive(false);
         Debug.Log(scene.buildIndex);
-        if (scene.buildIndex > 0)
+        if (scene.buildIndex > 2)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 1)
+        if (scene.buildIndex > 3)
         {
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 2)
+        if (scene.buildIndex > 4)
         {
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 3)
+        if (scene.buildIndex > 5)
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            earPodMusic.mute = false;
         }
         //cakes = new Dictionary<GameObject, float>();
         Debug.Log(cakes);
