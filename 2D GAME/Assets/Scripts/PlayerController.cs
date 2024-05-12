@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject levelExitClose;
+    public GameObject levelExitOpen;
     public Animator animator;
     public List<char> keys = new List<char>();
     public bool grounded = true;
     public bool hasEarPod = false;
     private Rigidbody2D rb;
+    private GameObject light;
 
     private float horizontal_top_speed;
     private float horizontal_target_speed;
@@ -31,19 +34,26 @@ public class PlayerController : MonoBehaviour
     public float tinyTimer = 6f;
     public float tinyTime = 0f;
     public GameObject cake;
-    public Dictionary<GameObject, float> cakes;
+    private Dictionary<GameObject, float> cakes = new Dictionary<GameObject, float>();
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //levelExitOpen.SetActive(false);
+        if(gameObject.transform.childCount>=8){
+            if(gameObject.transform.GetChild(7).gameObject.name == "playerLight"){
+                light = gameObject.transform.GetChild(7).gameObject;
+                light.SetActive(false);
+            }
+        }
+        
         Scene scene = SceneManager.GetActiveScene();
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         gameObject.transform.GetChild(1).gameObject.SetActive(false);
         gameObject.transform.GetChild(2).gameObject.SetActive(false);
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
-        gameObject.transform.GetChild(6).gameObject.SetActive(false);
         Debug.Log(scene.buildIndex);
         if (scene.buildIndex > 0)
         {
@@ -61,7 +71,8 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
         }
-        cakes = new Dictionary<GameObject, float>();
+        //cakes = new Dictionary<GameObject, float>();
+        Debug.Log(cakes);
     }
 
     public bool IsGrounded()
@@ -95,9 +106,10 @@ public class PlayerController : MonoBehaviour
         triggerThisFrame = false;
         openedDoorThisFrame = false;
         //added
-        Tiny();
+        
         if (cakes.Count > 0)
         {
+            Tiny();
             tiny = true;
             gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             CapsuleCollider2D collider = gameObject.GetComponent<CapsuleCollider2D>();
@@ -138,15 +150,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "LevelExit" && !levelExitClose.activeSelf){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Finish")
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //animator.SetTrigger("gottenArm");
-        }
-        if (collision.gameObject.tag == "SecondEar")
+        }        
+        
+        if (collision.gameObject.tag.StartsWith("Door") && keys.Contains(collision.gameObject.tag[collision.gameObject.tag.Length - 1]))
         {
-            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
         }
         if (collision.gameObject.tag == "GetNose")
         {
@@ -167,18 +183,11 @@ public class PlayerController : MonoBehaviour
             //keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
             //Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "LevelExit")
+        if(collision.gameObject.name == "Cake")
         {
-            if (gameObject.transform.GetChild(2).gameObject.activeSelf)
-            {
-                Destroy(collision.gameObject);
-            }
-            if (collision.gameObject.name == "Cake")
-            {
-                cake = collision.gameObject;
-                collision.gameObject.SetActive(false);
-                tiny = true;
-            }
+            cakes[collision.gameObject] = tinyTimer;
+            collision.gameObject.SetActive(false);
+            tiny = true;
         }
     }
 
@@ -224,6 +233,15 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if (collision.gameObject.tag == "SecondEar" && hasEarPod) {
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            levelExitClose.SetActive(false);
+                
+        }
+        if(collision.gameObject.tag=="enterDarkness"){
+            Debug.Log("I entered darkness");
+            light.SetActive(true);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -236,40 +254,30 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf)
-        {
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Ladder" && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             onLadder = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 3);
         }
-    }
-
-    void DecideGravity()
-    {
-        if (onLadder)
-        {
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
-        }
-        else if (rb.velocity.y < -15f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -15);
-        }
-        else if (rb.velocity.y >= -20f && rb.velocity.y < -1f)
-        {
-            rb.gravityScale = 4f;
-        }
-        else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f)
-        {
-            rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
-        }
-        else if (rb.velocity.y >= 0.5f)
-        {
-            rb.gravityScale = 1.6f;
+        if(collision.gameObject.tag=="enterDarkness"){
+            Debug.Log("I exited darkness");
+            light.SetActive(false);
         }
     }
-
+    void DecideGravity() {
+            if (onLadder) {
+                rb.gravityScale = 0f;
+                rb.velocity = new Vector2(rb.velocity.x, 10 * Input.GetAxis("Vertical"));
+            } else if (rb.velocity.y < -15f) {
+                rb.velocity = new Vector2(rb.velocity.x, -15);
+            } else if (rb.velocity.y >= -20f && rb.velocity.y < -1f) {
+                rb.gravityScale = 4f;
+            } else if (rb.velocity.y >= -1f && rb.velocity.y < 0.5f) {
+                rb.gravityScale = 1f; // make the player more floaty at the peak of their jump
+            } else if (rb.velocity.y >= 0.5f) {
+                rb.gravityScale = 1.6f;
+            }
+        }
 
     
 
@@ -324,22 +332,6 @@ public class PlayerController : MonoBehaviour
                 cake.SetActive(true);
             }
         }
-        void Tiny()
-        {
-            tiny = true;
-            tinyTime += Time.deltaTime;
-
-            if (tinyTime > tinyTimer)
-            {
-                tiny = false;
-                cake.SetActive(true);
-                tinyTime = 0f;
-            }
-
-        }
-        
-        
-
         
     }
 }
