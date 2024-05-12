@@ -74,15 +74,15 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 3)
+        if (scene.buildIndex > 4)
         {
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 4)
+        if (scene.buildIndex > 5)
         {
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
-        if (scene.buildIndex > 5)
+        if (scene.buildIndex > 6)
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
             earPodMusic.mute = false;

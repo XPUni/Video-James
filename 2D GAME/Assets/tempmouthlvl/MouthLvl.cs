@@ -71,7 +71,7 @@ public class MouthLvl : MonoBehaviour
                 ingredientTotal++;
                 break;
             case "Bowl":
-                if(ingredientTotal == 4)
+                if(ingredientTotal == 12)
                 {
                     complete = true;
                     collision.gameObject.SetActive(false);

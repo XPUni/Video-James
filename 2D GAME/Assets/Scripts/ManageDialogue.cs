@@ -46,7 +46,8 @@ public class ManageDialogue : MonoBehaviour
                 }
                 else
                 {
-                    icon.SetActive(true);
+                    handicon.SetActive(true);
+                    icon.SetActive(false);
                 }
             }
         }
