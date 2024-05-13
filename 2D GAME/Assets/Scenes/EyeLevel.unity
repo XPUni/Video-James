@@ -302,7 +302,7 @@ MonoBehaviour:
   mouthicon: {fileID: 0}
   earicon: {fileID: 0}
   icon: {fileID: 1695453652}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 460327590}
 --- !u!224 &83901599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   mouthicon: {fileID: 0}
   earicon: {fileID: 0}
   icon: {fileID: 1695453652}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 460327590}
 --- !u!224 &141998829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1099,6 +1099,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
+--- !u!1 &460327590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7428076883523281556, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1695453651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478758438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2432,7 @@ MonoBehaviour:
   mouthicon: {fileID: 0}
   earicon: {fileID: 0}
   icon: {fileID: 1695453652}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 460327590}
 --- !u!224 &762746961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30094,7 +30099,7 @@ MonoBehaviour:
   mouthicon: {fileID: 0}
   earicon: {fileID: 0}
   icon: {fileID: 1695453652}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 460327590}
 --- !u!224 &1673495415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31113,7 +31118,7 @@ MonoBehaviour:
   mouthicon: {fileID: 0}
   earicon: {fileID: 0}
   icon: {fileID: 1695453652}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 460327590}
 --- !u!224 &2010386328
 RectTransform:
   m_ObjectHideFlags: 0

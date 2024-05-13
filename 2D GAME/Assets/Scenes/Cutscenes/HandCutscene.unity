@@ -850,6 +850,13 @@ MonoBehaviour:
   new_text: '"Now that I have arms, I can go through this door. Hooray!"'
   existenceCheck: {fileID: 885052105}
   exists: 0
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &185296913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -959,6 +966,13 @@ MonoBehaviour:
     for longer."'
   existenceCheck: {fileID: 249485058}
   exists: 1
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &228194386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1621,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2088,10 +2102,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1814030605191240774, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1689120396}
+    - targetCorrespondingSourceObject: {fileID: 1814030605191240774, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1689120397}
   m_SourcePrefab: {fileID: 100100000, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
 --- !u!1 &1075628937
 GameObject:
@@ -2248,7 +2269,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -21517,6 +21538,13 @@ MonoBehaviour:
     R to play it again or just jump into the abyss.
   existenceCheck: {fileID: 249485058}
   exists: 0
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1295532496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21626,6 +21654,13 @@ MonoBehaviour:
     escape from this pit is pressing R."'
   existenceCheck: {fileID: 249485058}
   exists: 1
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1402661235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21712,7 +21747,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -21874,7 +21909,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -22053,6 +22088,13 @@ MonoBehaviour:
     tall. I think I''ll have to climb the ladder to get back."'
   existenceCheck: {fileID: 885052105}
   exists: 0
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1677919041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22162,6 +22204,13 @@ MonoBehaviour:
     need those first."'
   existenceCheck: {fileID: 249485058}
   exists: 1
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1683525611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22186,6 +22235,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1814030605191240774, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
   m_PrefabInstance: {fileID: 989851198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1689120396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689120395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d78d1e2890640f4293e209cd95b2016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1689120397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689120395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 20a95c74ce7693c4cbb45d2364a06749, type: 2}
 --- !u!1 &1690854709
 GameObject:
   m_ObjectHideFlags: 0
@@ -22355,7 +22433,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -22537,6 +22615,13 @@ MonoBehaviour:
     <3"'
   existenceCheck: {fileID: 249485058}
   exists: 1
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1754872662
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22779,6 +22864,13 @@ MonoBehaviour:
     if I still had eyes."'
   existenceCheck: {fileID: 249485058}
   exists: 0
+  name: {fileID: 0}
+  speakerName: 
+  handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
+  icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1920475101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22923,7 +23015,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

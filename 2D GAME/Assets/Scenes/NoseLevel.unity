@@ -680,7 +680,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &67188357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1118,7 +1121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &219079551
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1706,7 +1709,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &311498527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2429,7 +2435,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &527920819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2685,7 +2694,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &537946773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2875,9 +2887,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
-      propertyPath: earPodMusic
+      propertyPath: mainMusic
       value: 
       objectReference: {fileID: 1154489847}
+    - target: {fileID: 5794376585250543580, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
+      propertyPath: earPodMusic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6756037075558201234, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3109,7 +3125,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &703940027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3218,10 +3237,13 @@ MonoBehaviour:
   new_text: '"SNIFFFFFFFF... I''m getting closer!"'
   existenceCheck: {fileID: 452382077}
   exists: 0
-  name: {fileID: 1686492364}
+  name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &705173970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3504,11 +3526,11 @@ GameObject:
   - component: {fileID: 814744757}
   m_Layer: 0
   m_Name: Escape
-  m_TagString: Untagged
+  m_TagString: Mirror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &814744757
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3779,7 +3801,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &852478042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4087,7 +4112,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &943473994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4406,6 +4434,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4644035956114825975, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
   m_PrefabInstance: {fileID: 1068474901}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1068474905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7428076883523281556, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+  m_PrefabInstance: {fileID: 1068474901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128961562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,7 +4531,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1128961566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5261,7 +5297,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1188577544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6140,7 +6179,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: Nose
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1492699026
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6253,7 +6295,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1520321376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30710,7 +30755,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: Nose
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1807646460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31237,7 +31285,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1949339697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31349,7 +31400,10 @@ MonoBehaviour:
   name: {fileID: 529435046}
   speakerName: You
   handicon: {fileID: 244633772}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 1068474904}
+  dialogueBox: {fileID: 1068474905}
 --- !u!224 &1998878249
 RectTransform:
   m_ObjectHideFlags: 0

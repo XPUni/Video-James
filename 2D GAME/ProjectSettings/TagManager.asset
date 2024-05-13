@@ -32,6 +32,8 @@ TagManager:
   - firstEar
   - Mouth
   - Mirror
+  - SingleDoor
+  - SingleKey
   layers:
   - Default
   - TransparentFX

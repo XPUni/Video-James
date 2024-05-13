@@ -69,6 +69,9 @@ public class PlayerController : MonoBehaviour
             mainMusic.mute = true;
 
         }
+        else{
+            mainMusic.mute = false;
+        }
         Debug.Log(scene.buildIndex);
         if (scene.buildIndex > 2)
         {
