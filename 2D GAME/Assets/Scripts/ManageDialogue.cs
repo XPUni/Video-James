@@ -23,7 +23,9 @@ public class ManageDialogue : MonoBehaviour
 
     void Start()
     {
-        
+        if (dialogueBox == null) {
+            dialogueBox = textMeshPro.transform.parent.gameObject;
+        }
     }
 
     // Update is called once per frame

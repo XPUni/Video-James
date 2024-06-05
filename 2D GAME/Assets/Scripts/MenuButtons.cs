@@ -28,12 +28,12 @@ public class MenuButtons : MonoBehaviour
 
     public void Level3()
     {
-        SceneManager.LoadScene("Ears");
+        SceneManager.LoadScene("EarsCutscene");
     }
 
     public void Level4()
     {
-        SceneManager.LoadScene("mouth");
+        SceneManager.LoadScene("MouthCutscene");
     }
 
     public void Level5()

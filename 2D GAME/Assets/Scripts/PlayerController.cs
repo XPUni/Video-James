@@ -7,6 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     public AudioSource mainMusic;
     public AudioSource earPodMusic;
+    public AudioSource walkSFX;
+    public AudioSource otherSFX;
+    public AudioClip landClip;
+    public AudioClip jumpClip;
+    public AudioClip eatClip;
+    public AudioClip doorClip;
+
     public GameObject levelExitClose;
     public GameObject levelExitOpen;
     public Animator animator;
@@ -108,7 +115,7 @@ public class PlayerController : MonoBehaviour
     }
     public bool CanExpand()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y + transform.localScale.y * 0.5f), new Vector2(transform.localScale.x * 2, transform.localScale.y * 2), 0f); // Adjust radius as needed
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y + transform.localScale.y), new Vector2(transform.localScale.x * 2, transform.localScale.y * 2), 0f); // Adjust radius as needed
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject.tag == "Ground" || collider.gameObject.tag.StartsWith("Door"))
@@ -134,10 +141,11 @@ public class PlayerController : MonoBehaviour
             CapsuleCollider2D collider = gameObject.GetComponent<CapsuleCollider2D>();
             collider.size = new Vector2(0.5f, 1);
         }
-        else if (CanExpand())
+        else if (CanExpand() && gameObject.transform.localScale.y == 0.5f)
         {
             tiny = false;
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
             CapsuleCollider2D collider = gameObject.GetComponent<CapsuleCollider2D>();
             collider.size = new Vector2(1f, 2f);
         }
@@ -152,6 +160,9 @@ public class PlayerController : MonoBehaviour
 
         //^^
         if (Input.GetKeyDown(KeyCode.R)) { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+        if (!grounded && IsGrounded()) {
+            otherSFX.PlayOneShot(landClip);
+        }
         grounded = IsGrounded();
         animator.SetBool("isJump", !grounded);
         // coyote time and jump buffering
@@ -203,6 +214,7 @@ public class PlayerController : MonoBehaviour
                 openedDoorThisFrame = true;
                 keys.Remove(collision.gameObject.tag[collision.gameObject.tag.Length - 1]);
                 Destroy(collision.gameObject);
+                otherSFX.PlayOneShot(doorClip);
                 if (key_tracker != null)
                 {
                     key_tracker.DrawKeys();
@@ -216,6 +228,7 @@ public class PlayerController : MonoBehaviour
             cakes[collision.gameObject] = tinyTimer;
             collision.gameObject.SetActive(false);
             tiny = true;
+            otherSFX.PlayOneShot(eatClip);
         }
     }
 
@@ -326,8 +339,13 @@ public class PlayerController : MonoBehaviour
         if (horizontal_target_speed != 0)
         {
             animator.SetBool("isMove", true);
+            if (!walkSFX.isPlaying) { walkSFX.Play(); }
         }
-        else { animator.SetBool("isMove", false); }
+        else { 
+            animator.SetBool("isMove", false);
+            walkSFX.Stop();
+        }
+        if (!grounded) { walkSFX.Stop(); }
         rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, horizontal_target_speed, 50f * Time.deltaTime), rb.velocity.y);
         //if (rb.velocity.x < 0) { gameObject.transform.localScale = new Vector3(-1,1,1); }
         //else if (rb.velocity.x > 0) { gameObject.transform.localScale = new Vector3(1,1,1); }
@@ -345,6 +363,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         animator.SetBool("isJump", true);
+        otherSFX.PlayOneShot(jumpClip);
         bufferTracker = 0f;
         rb.velocity = new Vector2(rb.velocity.x, 10f);
         grounded = false;
