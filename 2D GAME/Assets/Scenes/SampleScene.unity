@@ -23252,7 +23252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3113676253735681192, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
       propertyPath: m_Color.a
-      value: 0.27058825
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3173347649311070538, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
       propertyPath: m_SizeDelta.x

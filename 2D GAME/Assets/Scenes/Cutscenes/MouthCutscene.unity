@@ -3405,6 +3405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: look who text
       objectReference: {fileID: 0}
+    - target: {fileID: 3113676253735681192, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
       propertyPath: m_text
       value: '"Look who decided to show up for once. Ha!"'
@@ -27108,6 +27112,7 @@ MonoBehaviour:
   lvlTime: 0
   timeText: {fileID: 1043626749}
   clock: {fileID: 1129268251}
+  bigCake: {fileID: 0}
 --- !u!95 &2112138089 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5446193171909179669, guid: 1d3ce0a4b8f45544992e21c757b675a5, type: 3}

@@ -3495,6 +3495,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 201845820}
     m_Modifications:
+    - target: {fileID: 3113676253735681192, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5917341073660827354, guid: b406f4d5e6e2348c8870c6f738ff7221, type: 3}
       propertyPath: m_text
       value: (Well.... That was easy. (Famous last words))
@@ -4478,7 +4482,10 @@ MonoBehaviour:
   name: {fileID: 0}
   speakerName: 
   handicon: {fileID: 0}
+  mouthicon: {fileID: 0}
+  earicon: {fileID: 0}
   icon: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!224 &1624323286
 RectTransform:
   m_ObjectHideFlags: 0
